@@ -11,7 +11,7 @@
 	</script>
 	<title> Academy Shipping Generator </title> <!--Title of Website-->
  
-	<style id="jsbin-css"> /*Editing CSS*/ 
+	<style id="stylesheet.css"> /*Editing CSS*/ 
 	
 body {
 	background-color: #C6E2FF; /* That wonderful blue in the background */
@@ -72,25 +72,29 @@ ul {
 <body> <!--Begin Body-->
 	
 	<p class = "para"> Academy Shipping Generator V.0.0.1 </p> <!--Text for header of website-->
-	<div class = "result"> And your random ship is.....</div> 
-	<button id = "button"> Click to run </button>  
-  <div id = "ship" > </div>
-	<h4> What's new </h4>
+	<div class = "result"> And your random ship is.....</div> <!--Text sitting on top of result-->
+	<button id = "button"> Click to run </button> <!--Text for button-->
+  <div id = "ship" > </div> <!--Div where output is logged-->
+	<h4> What's new </h4> <!--Header for update log-->
 	<ul>
 		<li> All names added</li>
 		<li> Base code written </li>
 		<li> BETA testing currently underway </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
 	</ul>
-<script id="jsbin-javascript">
+	
+<script id="script.js"> /*Begin jQuery for mouse highlight on button*/
+
 $(document).ready(function() {
-    $("button").mouseenter(function() {
+    $("button").mouseenter(function() { /*jQuery for when mouse is on the button*/
         $("button").fadeTo("fast", 1);
     });
-    $("button").mouseleave(function() {
+    
+    $("button").mouseleave(function() { /*jQuery for when mouse leaves the button*/
         $("button").fadeTo("fast", 0.5);
 });
 });
+/*End jQuery and begin JavaScript for the actual shipping part*/
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
