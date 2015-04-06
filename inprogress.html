@@ -110,22 +110,22 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Shil Shah ' ,' Max Smithberg ' ,' Thomas Radomski ', ' Xander Apponi '  ,
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
 ' Nick Dawson ', ' Walter Gilbert ', 
-' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson']; /*Array for Boy names*/
+
+
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
 'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
-'Hannah Melo', 'Brooke Bednarke '];
-     
-var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+'Hannah Melo', 'Brooke Bednarke ']; /*Array for Girl names*/
+
 var displayShip = function() {
-                       var randBoy = acadBoys[Math.floor(Math.random() * 60)];
-                       var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
+                var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
+                var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
+		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
        };
                         
-document.getElementById("button").addEventListener("click", displayShip);
+document.getElementById("button").addEventListener("click", displayShip); /* Runs the displayShip() function when the button is clicked */
 </script>
  
 <script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
