@@ -1,73 +1,78 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--HTML Doc start--> 
 <html>
-	<head>
-<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<head> <!--Header start-->
+<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" /> <!--jQuery script loaders-->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script> <!--jQuery script loaders-->
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> <!--jQuery script loaders-->
 	
-	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
-	<script type="text/javascript" src="script.js">
+	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> <!--CSS Link-->
+	<script type="text/javascript" src="script.js"> /*Javascript Link*/
 	
 	</script>
-	<title> Academy Shipping Generator </title>
+	<title> Academy Shipping Generator </title> <!--Title of Website-->
  
-	<style id="jsbin-css">
+	<style id="jsbin-css"> /*Editing CSS*/ 
+	
 body {
-background-color: #C6E2FF;
+	background-color: #C6E2FF; /* That wonderful blue in the background */
 }
+
 p {
-font-family: Garamond; 
-font-weight: bold; 
-text-align: center; 
-font-size: 3em;
+	font-family: Garamond; /* Formatting for the title */
+	font-weight: bold; 
+	text-align: center; 
+	font-size: 3em;
 }  
+
 h4 {
-font-family: Garamond;
-text-align: left; 
-font-size: 1em;
-margin-top: 100px;
+	font-family: Garamond; /* Formatting for the "What's New" header"*/
+	text-align: left; 
+	font-size: 1em;
+	margin-top: 100px;
 }
+
 ul {
-font-family: Courier;
-text-align: left; 
-font-size: 1em; 
+	font-family: Courier; /* Formatting for the Bullet Points underneath the h4 */
+	text-align: left; 
+	font-size: 1em; 
 }
+
 #button {
-    text-align: center; 
-    font-family: Garamond; 
-    font-size: 40px;
-    display: inline-block;
-    border: solid black 5px;
-    width: 800px;
-    height: 50px;
-    float: left;
+	text-align: center; /* Formatting for the "Click to run" button */
+	font-family: Garamond; 
+	font-size: 40px;
+	display: inline-block;
+	border: solid black 5px;
+	width: 800px;
+	height: 50px;
+    	float: left;
     }
     
 #ship {
-   float: right;
-   display: inline;
-    border: solid black 5px;
-    width: 700px;
-    height: 50px;
-    float: absolute;
-    text-align: center; 
-    font-family: Garamond;
-    font-size: 25px;
-    }
+	float: right; /* Formatting for the output */
+	display: inline;
+    	border: solid black 5px;
+    	width: 700px;
+    	height: 50px;
+    	float: absolute;
+    	text-align: center; 
+    	font-family: Garamond;
+    	font-size: 25px;
+	 }
   
 .result {
-    text-align: right; 
+    text-align: right; /* Formatting for the "And you ship is...." text on the right */
     font-size: 40px;
-      
-    }
-</style>
-</head>
+	}
+	
+</style> <!--End CSS-->
+</head> <!--End header-->
   
  
-<body>
+<body> <!--Begin Body-->
 	
-	<p class = "para"> Academy Shipping Generator V.0.0.1 </p>
-	<div class = "result"> And your random ship is.....</div>
+	<p class = "para"> Academy Shipping Generator V.0.0.1 </p> <!--Text for header of website-->
+	<div class = "result"> And your random ship is.....</div> 
 	<button id = "button"> Click to run </button>  
   <div id = "ship" > </div>
 	<h4> What's new </h4>
