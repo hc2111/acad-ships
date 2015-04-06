@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	
+	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+	<script type="text/javascript" src="script.js">
+	
+	</script>
+	<title> Academy Shipping Generator </title>
+ 
+	<style id="jsbin-css">
+body {
+background-color: #C6E2FF;
+}
+p {
+font-family: Garamond; 
+font-weight: bold; 
+text-align: center; 
+font-size: 3em;
+}  
+h4 {
+font-family: Garamond;
+text-align: left; 
+font-size: 1em;
+margin-top: 100px;
+}
+ul {
+font-family: Courier;
+text-align: left; 
+font-size: 1em; 
+}
+#button {
+    text-align: center; 
+    font-family: Garamond; 
+    font-size: 40px;
+    display: inline-block;
+    border: solid black 5px;
+    width: 800px;
+    height: 50px;
+    float: left;
+    }
+    
+#ship {
+   float: right;
+   display: inline;
+    border: solid black 5px;
+    width: 700px;
+    height: 50px;
+    float: absolute;
+    text-align: center; 
+    font-family: Garamond;
+    font-size: 25px;
+    }
+  
+.result {
+    text-align: right; 
+    font-size: 40px;
+      
+    }
+</style>
+</head>
+  
+ 
+<body>
+	
+	<p class = "para"> Academy Shipping Generator V.0.0.1 </p>
+	<div class = "result"> And your random ship is.....</div>
+	<button id = "button"> Click to run </button>  
+  <div id = "ship" > </div>
+	<h4> What's new </h4>
+	<ul>
+		<li> All names added</li>
+		<li> Base code written </li>
+		<li> BETA testing currently underway </li>
+		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+	</ul>
+<script id="jsbin-javascript">
+$(document).ready(function() {
+    $("button").mouseenter(function() {
+        $("button").fadeTo("fast", 1);
+    });
+    $("button").mouseleave(function() {
+        $("button").fadeTo("fast", 0.5);
+});
+});
+var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
+' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
+' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
+' Asher Kam ', ' Ashish Yalavarthi ', ' Ben White ', ' Wil Blount ', 
+' Brian Espinoza ', ' Chester Hall ', ' Chris Woods ',
+' Connor Shenberg ' , ' Daniel Hayes ', ' David Bueno ', ' Dharma Patel ',
+' Erik Cook ', ' Erik Madrid ', ' Evan Sattler ' ,
+' Nathaniel Fleig ', ' Hammad Imam ', ' Harris Mohamed ', ' Harry Chen ',
+' Hussain Rizvi ', ' Jake Dixon ', ' Jayam Shah ', ' John Bozeki ', ' John Magarzo ',
+' Josh Curtis ', ' Jay Thakkar ', ' Justin Bun ', ' Kevin Nguyen ', ' Nick Kirstein ',
+' Koyo Masore ', ' Nick O Brien ',  ' Sunny Patel ',' Pawel Rzucidlo ', ' Purav Shah ' , 
+' Quentin Gordon ', ' Ryan Roberts ',  ' Ryan Skyzypek ', ' Sahil Modi ', ' Sean Waite ',
+' Shil Shah ' ,' Max Smithberg ' ,' Thomas Radomski ', ' Xander Apponi '  ,
+' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
+' Nick Dawson ', ' Walter Gilbert ', 
+' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
+'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
+'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
+'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
+'Hannah Melo', 'Brooke Bednarke '];
+     
+var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var displayShip = function() {
+                       var randBoy = acadBoys[Math.floor(Math.random() * 60)];
+                       var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
+       };
+                        
+document.getElementById("button").addEventListener("click", displayShip);
+</script>
+ 
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+	<head>
+<link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"><\/script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"><\/script>
+	
+	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+	<script type="text/javascript" src="script.js">
+	
+	<\/script>
+	<title> Academy Shipping Generator </title>
+	</head>
+  
+<body>
+	
+	<p class = "para"> Academy Shipping Generator V.0.0.1 </p>
+	<div class = "result"> And your random ship is.....</div>
+	<button id = "button"> Click to run </button>  
+  <div id = "ship" > </div>
+	<h4> What's new </h4>
+	<ul>
+		<li> All names added</li>
+		<li> Base code written </li>
+		<li> BETA testing currently underway </li>
+		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+	</ul>
+</body> 
+</html>
+            </script>
+<script id="jsbin-source-css" type="text/css">body {
+background-color: #C6E2FF;
+}
+p {
+font-family: Garamond; 
+font-weight: bold; 
+text-align: center; 
+font-size: 3em;
+}  
+h4 {
+font-family: Garamond;
+text-align: left; 
+font-size: 1em;
+margin-top: 100px;
+}
+ul {
+font-family: Courier;
+text-align: left; 
+font-size: 1em; 
+}
+#button {
+    text-align: center; 
+    font-family: Garamond; 
+    font-size: 40px;
+    display: inline-block;
+    border: solid black 5px;
+    width: 800px;
+    height: 50px;
+    float: left;
+    }
+    
+#ship {
+   float: right;
+   display: inline;
+    border: solid black 5px;
+    width: 700px;
+    height: 50px;
+    float: absolute;
+    text-align: center; 
+    font-family: Garamond;
+    font-size: 25px;
+    }
+  
+.result {
+    text-align: right; 
+    font-size: 40px;
+      
+    } 
+</script>
+<script id="jsbin-source-javascript" type="text/javascript">$(document).ready(function() {
+    $("button").mouseenter(function() {
+        $("button").fadeTo("fast", 1);
+    });
+    $("button").mouseleave(function() {
+        $("button").fadeTo("fast", 0.5);
+});
+});
+var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
+' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
+' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
+' Asher Kam ', ' Ashish Yalavarthi ', ' Ben White ', ' Wil Blount ', 
+' Brian Espinoza ', ' Chester Hall ', ' Chris Woods ',
+' Connor Shenberg ' , ' Daniel Hayes ', ' David Bueno ', ' Dharma Patel ',
+' Erik Cook ', ' Erik Madrid ', ' Evan Sattler ' ,
+' Nathaniel Fleig ', ' Hammad Imam ', ' Harris Mohamed ', ' Harry Chen ',
+' Hussain Rizvi ', ' Jake Dixon ', ' Jayam Shah ', ' John Bozeki ', ' John Magarzo ',
+' Josh Curtis ', ' Jay Thakkar ', ' Justin Bun ', ' Kevin Nguyen ', ' Nick Kirstein ',
+' Koyo Masore ', ' Nick O Brien ',  ' Sunny Patel ',' Pawel Rzucidlo ', ' Purav Shah ' , 
+' Quentin Gordon ', ' Ryan Roberts ',  ' Ryan Skyzypek ', ' Sahil Modi ', ' Sean Waite ',
+' Shil Shah ' ,' Max Smithberg ' ,' Thomas Radomski ', ' Xander Apponi '  ,
+' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
+' Nick Dawson ', ' Walter Gilbert ', 
+' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
+'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
+'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
+'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
+'Hannah Melo', 'Brooke Bednarke '];
+     
+var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var displayShip = function() {
+                       var randBoy = acadBoys[Math.floor(Math.random() * 60)];
+                       var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
+       };
+                        
+document.getElementById("button").addEventListener("click", displayShip);
+</script></body> 
+</html>
