@@ -147,7 +147,7 @@ var displayShip = function() {
                 //var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
                 //var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
 		var generator1=SeedRandom() //Seed with current time
-		var randBoy = acadBoys[generator1(73)]
+		var randBoy = acadBoys[generator1(63)]
 		var randGirl = acadGirls[generator1(20)]
 		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
        };
