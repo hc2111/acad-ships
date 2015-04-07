@@ -57,11 +57,7 @@ ul {
     	font-size: 25px;
 	 }
 	 
-#log {
-	text-align: right;	
-	font-family: Garamond;
-    	font-size: 25px;
-}
+
   
 .result {
     text-align: right; /* Formatting for the "And you ship is...." text on the right */
@@ -123,7 +119,7 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var displayShip = function() {
                 var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
                 var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
-		document.getElementById("log").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
+		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
        };
                         
 document.getElementById("button").addEventListener("click", displayShip); /* Runs the displayShip() function when the button is clicked */
