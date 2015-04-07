@@ -46,12 +46,15 @@ ul {
     }
     
 #ship {
-	float: absolute; /* Formatting for the output */
-	display: inline;
-    	text-align: right; 
-    	font-family: Garamond;
-    	font-size: 25px;	 
-	
+	float: right; /* Formatting for the output */
+	 display: inline;
+    border: solid black 5px;
+    width: 700px;
+    height: 50px;
+    float: absolute;
+    text-align: center; 
+    font-family: Garamond;
+    font-size: 25px;
 }
 	 
 
@@ -72,7 +75,7 @@ ul {
 	<p class = "para"> Academy Shipping Generator V.0.0.1 </p> <!--Text for header of website-->
 	<div class = "result"> And your random ship is.....</div> <!--Text sitting on top of result-->
 	<button id = "button"> Click to run </button> <!--Text for button-->
-  	<p id = "ship" > </p> <!--Div where output is logged-->
+  	<div id = "ship" > </div> <!--Div where output is logged-->
   	<div id = "log"> </div>
 	<h4> What's new </h4> <!--Header for update log-->
 	<ul>
@@ -118,7 +121,7 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var displayShip = function() {
                 var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
                 var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
-		document.getElementById("p").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
+		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
        };
                         
 document.getElementById("ship").addEventListener("click", displayShip()); /* Runs the displayShip() function when the button is clicked */
