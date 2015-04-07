@@ -90,7 +90,10 @@ $(document).ready(function() {
     
     $("button").mouseleave(function() { /*jQuery for when mouse leaves the button*/
         $("button").fadeTo("fast", 0.5);
-
+$("button").submit(function () {
+        var count = $(this).data("count") || 0;
+         $(this).data("count", ++count);
+});
 });
 });
 /*End jQuery and begin JavaScript for the actual shipping part*/
@@ -118,7 +121,7 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var displayShip = function() {
                 var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
                 var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
-		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
+		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl + count); /*Prints the final ship statement*/      
        };
                         
 document.getElementById("button").addEventListener("click", displayShip); /* Runs the displayShip() function when the button is clicked */
