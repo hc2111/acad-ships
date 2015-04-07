@@ -14,29 +14,25 @@
 	<style id="stylesheet.css"> /*Editing CSS*/ 
 	
 body {
-	background-color: #C6E2FF; /* That wonderful blue in the background */ 
+	background-color: #C6E2FF; /* That wonderful blue in the background */
 }
-
 p {
 	font-family: Garamond; /* Formatting for the title */
 	font-weight: bold; 
 	text-align: center; 
 	font-size: 3em;
 }  
-
 h4 {
 	font-family: Garamond; /* Formatting for the "What's New" header"*/
 	text-align: left; 
 	font-size: 1em;
 	margin-top: 100px;
 }
-
 ul {
 	font-family: Courier; /* Formatting for the Bullet Points underneath the h4 */
 	text-align: left; 
 	font-size: 1em; 
 }
-
 #button {
 	text-align: center; /* Formatting for the "Click to run" button */
 	font-family: Garamond; 
@@ -72,7 +68,7 @@ ul {
 <body> <!--Begin Body-->
 	
 	<p class = "para"> Academy Shipping Generator V.0.0.1 </p> <!--Text for header of website-->
-	<div class = "result"> And your random ship is....</div> <!--Text sitting on top of result-->
+	<div class = "result"> And your random ship is.....</div> <!--Text sitting on top of result-->
 	<button id = "button"> Click to run </button> <!--Text for button-->
   <div id = "ship" > </div> <!--Div where output is logged-->
 	<h4> What's new </h4> <!--Header for update log-->
@@ -84,7 +80,6 @@ ul {
 	</ul>
 	
 <script id="script.js"> /*Begin jQuery for mouse highlight on button*/
-
 $(document).ready(function() {
     $("button").mouseenter(function() { /*jQuery for when mouse is on the button*/
         $("button").fadeTo("fast", 1);
@@ -92,10 +87,6 @@ $(document).ready(function() {
     
     $("button").mouseleave(function() { /*jQuery for when mouse leaves the button*/
         $("button").fadeTo("fast", 0.5);
-        
-    $("button").click(function(){
-   	$("ship").append("<b>Appended text</b>");
-});
 });
 });
 /*End jQuery and begin JavaScript for the actual shipping part*/
@@ -115,15 +106,11 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
 ' Nick Dawson ', ' Walter Gilbert ', 
 ' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson']; /*Array for Boy names*/
-
-
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
 'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke ']; /*Array for Girl names*/
-
-}
 var displayShip = function() {
                 var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
                 var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
@@ -133,4 +120,3 @@ var displayShip = function() {
 document.getElementById("button").addEventListener("click", displayShip); /* Runs the displayShip() function when the button is clicked */
 </script>
  
-
