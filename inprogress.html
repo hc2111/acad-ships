@@ -118,10 +118,37 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke ']; /*Array for Girl names*/
-
+/* MUCH MUCH MUCH BETTER RANDOM FUNCTIO THAN THE JAVASCRIPT CANCER (IN Theory)*/
+function SeedRandom(state1,state2){
+    var mod1=4294967087
+    var mul1=65539
+    var mod2=4294965887
+    var mul2=65537
+    if(typeof state1!="number"){
+        state1=+new Date()
+    }
+    if(typeof state2!="number"){
+        state2=state1
+    }
+    state1=state1%(mod1-1)+1
+    state2=state2%(mod2-1)+1
+    function random(limit){
+        state1=(state1*mul1)%mod1
+        state2=(state2*mul2)%mod2
+        if(state1<limit && state2<limit && state1<mod1%limit && state2<mod2%limit){
+            return random(limit)
+        }
+        return (state1+state2)%limit
+    }
+    return random
+}
 var displayShip = function() {
-                var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
-                var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
+              	// Keeping that there just in case 
+                //var randBoy = acadBoys[Math.floor(Math.random() * 60)]; /*Picks Random Number between 1 and 0, multiplies it by 61, then rounds up to the next whole number, then picks that number in the array*/
+                //var randGirl = acadGirls[Math.floor(Math.random() * 20)]; /*Picks Random Number between 1 and 0, multiplies it by 20, then rounds up to the next whole number, then picks that number in the array*/
+		var generator1=SeedRandom() //Seed with current time
+		var randBoy = acadBoys[generator1(73)]
+		var randGirl = acadGirls[generator1(20)]
 		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); /*Prints the final ship statement*/      
        };
                         
