@@ -48,6 +48,14 @@ font-size: 1em;
     float: left;
     }
     
+#Achievement {
+	text-align: center;
+	font-family: Garamond;
+	border: solid black 5px;
+	width: 400px;
+	height: 50px;
+}
+
 #ship {
    float: right;
    display: inline;
@@ -75,6 +83,7 @@ font-size: 1em;
 	<div class = "result"> And your random ship is.....</div>
 	<button id = "button"> Click to run </button>  
   <div id = "ship" > </div>
+  <div id = "Achievement"> </div>
 	<h4> What's new </h4>
 	<ul>
 		<li> All names added</li>
@@ -127,6 +136,8 @@ var displayShip = function() {
 
                         
 document.getElementById("button").addEventListener("click", displayShip);
+
+
 </script>
  
 </body>
