@@ -90,8 +90,8 @@ font-size: 1em;
   
 	<h4> What's new </h4>
 	<ul>
-		<li> All names added</li>
-		<li> Base code written </li>
+		<li> Basic Achievements Added</li>
+		<li> Base code updated </li>
 		<li> BETA testing currently underway </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
 	</ul>
@@ -139,8 +139,15 @@ var displayShip = function() {
                        var achieve = function (x) {
                        	switch {
                        		case "The random ship is Wil Blount and Alexis Cosatino":
-                       			var y = document.getElementById("Achievement").innerHTML = ("")
+                       			document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
                        		break;
+                       		
+                       		case "The random ship is Wil Blount and Aishwarya Jois":
+                       			document.getElementById("Achievement").innerHTML = ("");
+                       		break;
+                       		
+                       		default: 
+                       		document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
                        	}
                        };
        };
