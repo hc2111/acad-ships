@@ -15,23 +15,28 @@
 body {
 background-color: #C6E2FF;
 }
+
 p {
 font-family: Garamond; 
 font-weight: bold; 
 text-align: center; 
 font-size: 3em;
 }  
+
+
 h4 {
 font-family: Garamond;
 text-align: left; 
 font-size: 1em;
 margin-top: 100px;
 }
+
 ul {
 font-family: Courier;
 text-align: left; 
 font-size: 1em; 
 }
+
 #button {
     text-align: center; 
     font-family: Garamond; 
@@ -66,7 +71,7 @@ font-size: 1em;
  
 <body>
 	
-	<p class = "para"> Academy Shipping Generator V.0.0.1 </p>
+	<p class = "para"> Academy Shipping Generator v.0.1.0 </p>
 	<div class = "result"> And your random ship is.....</div>
 	<button id = "button"> Click to run </button>  
   <div id = "ship" > </div>
@@ -86,6 +91,7 @@ $(document).ready(function() {
         $("button").fadeTo("fast", 0.5);
 });
 });
+
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -102,6 +108,7 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
 ' Nick Dawson ', ' Walter Gilbert ', 
 ' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
 'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
@@ -109,14 +116,18 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Hannah Melo', 'Brooke Bednarke '];
      
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+
 var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
                         document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
        };
+
                         
 document.getElementById("button").addEventListener("click", displayShip);
 </script>
+ 
 </body>
 </html>
