@@ -104,6 +104,7 @@ $(document).ready(function() {
         $("button").fadeTo("fast", 0.5);
 });
 });
+});
 
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
@@ -136,7 +137,10 @@ var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
                         var x =document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);  
-  /*                     var achieve = function (x) {
+  
+       };
+
+var achieve = function (x) {
                        	switch {
                        		case "The random ship is Wil Blount and Alexis Cosatino":
                        			document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
@@ -149,10 +153,7 @@ var displayShip = function() {
                        		default: 
                        		document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
                        	} 
-                       }; */
-       };
-
-                        
+                       };                 
    
 document.getElementById("button").addEventListener("click", displayShip);
 
