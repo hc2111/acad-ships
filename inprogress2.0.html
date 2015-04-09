@@ -86,7 +86,8 @@ $(document).ready(function() {
     $("button").mouseleave(function() {
         $("button").fadeTo("fast", 0.5);
     $("button").click(function(){
-    $("ship").append("displayShip()");
+    var x = $("ship").val();
+    	$("ship").append('<div class="item">' + x + '</div>');
 });
 });
 });
