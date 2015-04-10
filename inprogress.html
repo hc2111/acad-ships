@@ -136,8 +136,9 @@ var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+                        document.getElementById("Achievement").innerHTML = "Stuff";
                         var x =document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);  
-  			if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
+  		/*	if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
      document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy == ' Wil Blount ' && randGirl == 'Aishwarya Jois'){
     document.getElementById("Achievement").innerHTML =("Wilshwarya");
@@ -163,7 +164,7 @@ var displayShip = function() {
      document.getElementById("Achievement").innerHTML =("It's never too late to procrastinate.");
     } else  {
      document.getElementById("Achievement").innerHTML =("");
-    }
+    } */
        };
 
 
