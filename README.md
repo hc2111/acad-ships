@@ -12,7 +12,7 @@
   - [ ] Achievement Banners
   - [ ] Click Counter
 
-Contact us at harrism436@gmail.com or hccoding@gmail.com with any questions, comments, or concerns 
+Contact us at harrism436@gmail.com or hccoding@gmail.com with any questions, comments, requests, or concerns 
 
 ##Previous Versions:
 
