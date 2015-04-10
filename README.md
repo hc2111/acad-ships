@@ -8,7 +8,7 @@
 
 ##Coming in v.0.2.0:
   - [ ] Ship Name Memory
-  - [ ] Improved Graphics
+  - [ ] Changing BAckground Colours
   - [ ] AChievement Banners
 
 Contact us at harrism436@gmail.com or hccoding@gmail.com with any questions, comments, or concerns 
