@@ -6,10 +6,10 @@
 - [x] Basic Functions Initiated
 - [x] BETA Testing Underway
 
-##Upcoming Features:
+##Coming in v.0.2.0:
   - [ ] Ship Name Memory
   - [ ] Improved Graphics
-  - [ ] Unlockable Achievements
+  - [ ] AChievement Banners
 
 Contact us at harrism436@gmail.com or hccoding@gmail.com with any questions, comments, or concerns 
 
