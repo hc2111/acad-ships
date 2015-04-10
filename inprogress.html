@@ -137,24 +137,35 @@ var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
                         var x =document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);  
-  
+  			if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
+     document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
+    } else if (randBoy == ' Wil Blount ' && randGirl == 'Aishwarya Jois'){
+    document.getElementById("Achievement").innerHTML =("Wilshwarya");
+    } else if (randBoy == ' Hammad Imam ' && randGirl == 'Nadia Nikolova'){
+     document.getElementById("Achievement").innerHTML =("That ship went over the Niagara Falls");
+    } else if (randBoy == ' Xander Apponi ' && randGirl == 'Marissa Gustafson'){
+     document.getElementById("Achievement").innerHTML =("Aww.... Young love.");
+    } else if (randBoy == ' Jayam Shah ' && randGirl == 'Ami Patel'){
+     document.getElementById("Achievement").innerHTML =("Don't worry, you have Sean, Max and JT.");
+    } else if (randBoy == ' Alex Powell ' && randGirl == 'Jane Halloran'){
+     document.getElementById("Achievement").innerHTML =("He's no Tom, but he'll have to do.");
+    } else if (randBoy == ' Jayam Shah '){
+     document.getElementById("Achievement").innerHTML =("AREY JAYAM!");
+    } else if (randBoy == ' Harris Mohamed '){
+     document.getElementById("Achievement").innerHTML =("The creator himself");
+    } else if (randBoy == ' Koyo Masore '){
+     document.getElementById("Achievement").innerHTML =("The man..... The legend");
+    } else if (randBoy == ' Wil Blount '){
+     document.getElementById("Achievement").innerHTML =("Balsa Man");
+    } else if (randBoy == ' Nick Dawson '){
+     document.getElementById("Achievement").innerHTML =("But...But gravity goes up!");
+    } else if (randBoy == ' Xavier Espinoza '){
+     document.getElementById("Achievement").innerHTML =("It's never too late to procrastinate.");
+    } else  {
+     document.getElementById("Achievement").innerHTML =("");
        };
 
-var achieve = function (x) {
-                       	switch {
-                       		case "The random ship is Wil Blount and Alexis Cosatino":
-                       			document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
-                       		break;
-                       		
-                       		case "The random ship is Wil Blount and Aishwarya Jois":
-                       			document.getElementById("Achievement").innerHTML = ("");
-                       		break;
-                       		
-                       		default: 
-                       		document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
-                       	} 
-                       };                 
-   
+
 document.getElementById("button").addEventListener("click", displayShip);
 
 
