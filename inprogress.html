@@ -108,6 +108,8 @@ font-size: 1em;
 </span>
 
 <script id="jsbin-javascript">
+
+
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
@@ -150,7 +152,29 @@ var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
+                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); 
+                        var displayShip = function() {
+    if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
+     document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
+    } else if (randBoy == ' Wil Blount ' && randGirl == 'Aishwarya Jois'){
+    document.getElementById("ac").innerHTML = ("Wilshwarya");
+    } else if (randBoy == ' Hammad Imam ' && randGirl == 'Nadia Nikolova'){
+     document.getElementById("ac").innerHTML = ("That ship went over the Niagara Falls");
+    } else if (randBoy == ' Xander Apponi ' && randGirl == 'Marissa Gustafson'){
+     document.getElementById("ac").innerHTML = ("Aww.... Young love.");
+    } else if (randBoy == ' Jayam Shah ' && randGirl == 'Ami Patel'){
+    document.getElementById("ac").innerHTML = ("Don't worry, you have Sean, Max and JT.");
+    } else if (randBoy == ' Alex Powell ' && randGirl == 'Jane Halloran'){
+    document.getElementById("ac").innerHTML = ("He's no Tom, but he'll have to do.");
+    } else if (randBoy == ' Jayam Shah '){
+     document.getElementById("ac").innerHTML = ("AREY JAYAM!");
+    } else  {
+     document.getElementById("ac").innerHTML = ("");
+
+     }
+    
+    
+};
        };
                         
 document.getElementById("button").addEventListener("click", displayShip);
