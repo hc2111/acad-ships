@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
@@ -15,29 +16,23 @@
 body {
 background-color: #C6E2FF;
 }
-
 p {
 font-family: Garamond; 
 font-weight: bold; 
-text-align: right; 
+text-align: center; 
 font-size: 3em;
-margin-top: 50px;
-}
-
-
+}  
 h4 {
 font-family: Garamond;
 text-align: left; 
 font-size: 1em;
 margin-top: 100px;
 }
-
 ul {
 font-family: Courier;
 text-align: left; 
 font-size: 1em; 
 }
-
 #button {
     text-align: center; 
     font-family: Garamond; 
@@ -49,18 +44,6 @@ font-size: 1em;
     float: left;
     }
     
-#Achievement {
-	text-align: center;
-	font-family: Garamond;
-	border: none;
-	width: 400px;
-	height: 50px;
-	float: right;
-	margin-top: 0px;
-	margin-left: 200px;
-	font-size: 15px;
-}
-
 #ship {
    float: right;
    display: inline;
@@ -72,6 +55,7 @@ font-size: 1em;
     font-family: Garamond;
     font-size: 25px;
     }
+    
   
 .result {
     text-align: right; 
@@ -83,30 +67,48 @@ font-size: 1em;
   
  
 <body>
-	<div id = "Achievement"> </div>
-	<p class = "para"> Academy Shipping Generator V.0.2.0 </p>
+	
+	<p class = "para"> Academy Shipping Generator V.0.0.2 </p>
 	<div class = "result"> And your random ship is.....</div>
 	<button id = "button"> Click to run </button>  
-  	<div id = "ship" > </div>
-  
+  <div id = "ship" > </div>
 	<h4> What's new </h4>
 	<ul>
-		<li> Basic Achievements Added</li>
+		<li> All names added</li>
 		<li> Base code updated </li>
 		<li> BETA testing currently underway </li>
+		<li> Google+ sign in option added </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
 	</ul>
-<script id="jsbin-javascript">
-$(document).ready(function() {
-    $("button").mouseenter(function() {
-        $("button").fadeTo("fast", 1);
-    });
-    $("button").mouseleave(function() {
-        $("button").fadeTo("fast", 0.5);
-});
-});
-});
+	
 
+<span id="signinButton">
+  <span
+    class="g-signin"
+    data-callback="signinCallback"
+    data-clientid="282071029207-f5j1b7dgfm5iqnohp175c8meij7ip8gh.apps.googleusercontent.com" // HARRIS WHATEVER YOU DO DO NOT TOUCH THIS
+    data-cookiepolicy="single_host_origin"
+    data-requestvisibleactions="http://schema.org/AddAction"
+    data-scope="https://www.googleapis.com/auth/plus.login">
+  </span>
+</span>
+
+<script id="jsbin-javascript">
+// google+ button 
+function signinCallback(authResult) {
+  if (authResult['status']['signed_in']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+  } else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -123,7 +125,6 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
 ' Nick Dawson ', ' Walter Gilbert ', 
 ' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
-
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
 'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
@@ -131,47 +132,14 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Hannah Melo', 'Brooke Bednarke '];
      
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-
 var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-                        document.getElementById("Achievement").innerHTML = "Stuff";
-                        var x =document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);  
-  		/*	if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
-     document.getElementById("Achievement").innerHTML = ("Unattainable ships are the best kind.");
-    } else if (randBoy == ' Wil Blount ' && randGirl == 'Aishwarya Jois'){
-    document.getElementById("Achievement").innerHTML =("Wilshwarya");
-    } else if (randBoy == ' Hammad Imam ' && randGirl == 'Nadia Nikolova'){
-     document.getElementById("Achievement").innerHTML =("That ship went over the Niagara Falls");
-    } else if (randBoy == ' Xander Apponi ' && randGirl == 'Marissa Gustafson'){
-     document.getElementById("Achievement").innerHTML =("Aww.... Young love.");
-    } else if (randBoy == ' Jayam Shah ' && randGirl == 'Ami Patel'){
-     document.getElementById("Achievement").innerHTML =("Don't worry, you have Sean, Max and JT.");
-    } else if (randBoy == ' Alex Powell ' && randGirl == 'Jane Halloran'){
-     document.getElementById("Achievement").innerHTML =("He's no Tom, but he'll have to do.");
-    } else if (randBoy == ' Jayam Shah '){
-     document.getElementById("Achievement").innerHTML =("AREY JAYAM!");
-    } else if (randBoy == ' Harris Mohamed '){
-     document.getElementById("Achievement").innerHTML =("The creator himself");
-    } else if (randBoy == ' Koyo Masore '){
-     document.getElementById("Achievement").innerHTML =("The man..... The legend");
-    } else if (randBoy == ' Wil Blount '){
-     document.getElementById("Achievement").innerHTML =("Balsa Man");
-    } else if (randBoy == ' Nick Dawson '){
-     document.getElementById("Achievement").innerHTML =("But...But gravity goes up!");
-    } else if (randBoy == ' Xavier Espinoza '){
-     document.getElementById("Achievement").innerHTML =("It's never too late to procrastinate.");
-    } else  {
-     document.getElementById("Achievement").innerHTML =("");
-    } */
+                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
        };
-
-
+                        
 document.getElementById("button").addEventListener("click", displayShip);
-
-
 </script>
  
 </body>
