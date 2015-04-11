@@ -99,22 +99,6 @@ font-size: 1em;
 </span>
 
 
-<script id="jsbin-javascript">
-$(document).ready(function() {
-    $("button").mouseenter(function() {
-        $("button").fadeTo("fast", 1);
-    });
-    $("button").mouseleave(function() {
-        $("button").fadeTo("fast", 0.5);
-        
-         $("signinButton").mouseenter(function() {
-        $("signinButton").fadeTo("fast", 1);
-    });
-     $("signinButton").mouseleave(function() {
-        $("signinButton").fadeTo("fast", 1);
-    });
-});
-});
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
