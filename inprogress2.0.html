@@ -104,6 +104,11 @@ $(document).ready(function() {
     });
     $("button").mouseleave(function() {
         $("button").fadeTo("fast", 0.5);
+        $("signinButton").mouseenter(function() {
+        $("signinButton").fadeTo("fast", 1);
+    });
+    $("signinButton").mouseleave(function() {
+        $("signinButton").fadeTo("fast", 0.5);
 });
 });
 
