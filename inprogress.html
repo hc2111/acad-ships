@@ -152,8 +152,9 @@ var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var displayShip = function() {
                        var randBoy = acadBoys[Math.floor(Math.random() * 60)];
                        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-                        document.write("ship") = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl); 
-    if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
+                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);
+                        document.getElementById("ac").innerHTML = (randBoy);
+   /* if (randBoy == ' Wil Blount ' && randGirl =='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy == ' Wil Blount ' && randGirl == 'Aishwarya Jois'){
     document.getElementById("ac").innerHTML = ("Wilshwarya");
@@ -170,7 +171,7 @@ var displayShip = function() {
     } else  {
      document.getElementById("ac").innerHTML = ("Decent");
     
-};
+}; */
        };
                         
 document.getElementById("button").addEventListener("click", displayShip);
