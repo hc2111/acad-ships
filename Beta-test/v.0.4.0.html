@@ -1,147 +1,133 @@
-<!DOCTYPE html>
-<html>
-	<head>
-<link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
-<script src="https://apis.google.com/js/client:platform.js" async defer></script>
-<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	
-	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
-	<script type="text/javascript" src="script.js">
-	
-	</script>
-	<title> Academy Shipping Generator </title>
- 
-	<style id="jsbin-css">
-body {
-background-color: #C6E2FF;
-}
-a {
-	display: inline-block;
-}
-p {
-font-family: Garamond; 
-font-weight: bold; 
-text-align: center; 
-font-size: 40px;
-margin-left: 300px;
-display: inline-block;
-}  
-h4 {
-font-family: Garamond;
-text-align: left; 
-font-size: 1em;
-margin-top: 100px;
-}
-ul {
-font-family: Courier;
-text-align: left; 
-font-size: 1em; 
-}
-
-#button {
-    text-align: center; 
-    font-family: Garamond; 
-    font-size: 30px;
-    display: inline-block;
-    border: solid black 5px;
-    width: 800px;
-    height: 60px;
-    float: left;
-    }
-    
-#ship {
+ <!DOCTYPE html>
+ <html>
+ 	<head>
+ <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
+ <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+ <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+ <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+ 	
+ 	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+ 	<script type="text/javascript" src="script.js">
+ 	
+ 	</script>
+ 	<title> Academy Shipping Generator </title>
+  
+ 	<style id="jsbin-css">
+ body {
+ background-color: #C6E2FF;
+ }
+ a {
+ 	display: inline-block;
+ }
+ p {
+ font-family: Garamond; 
+ font-weight: bold; 
+ text-align: center; 
+ font-size: 40px;
+ margin-left: 300px;
+ display: inline-block;
+ }  
+ h4 {
+ font-family: Garamond;
+ text-align: left; 
+ font-size: 1em;
+ margin-top: 100px;
+ }
+ ul {
+ font-family: Courier;
+ text-align: left; 
+ font-size: 1em; 
+ }
+ #button {
+     text-align: center; 
+     font-family: Garamond; 
+     font-size: 30px;
+     display: inline-block;
+     border: solid black 5px;
+     width: 800px;
+     height: 60px;
+     float: left;
+     }
+     
+ #ship {
+     float: right;
+     display: inline;
+     border: solid black 5px;
+     width: 700px;
+     height: 50px;
+     float: absolute;
+     text-align: center; 
+     font-family: Garamond;
+     font-size: 25px;
+     }
+     
+ #ac {
     float: right;
-    display: inline;
-    border: solid black 5px;
-    width: 700px;
-    height: 50px;
-    float: absolute;
-    text-align: center; 
-    line-height: 40px;
-    font-family: Garamond;
-    font-size: 25px;
-    }
-    
-    #signinButton {
-	position: inline-block;
-	top: 10px; 
-	right: 10px;
-	border: none;
-    }
-#gplus1 {
-	position: relative;
-	top: 100px; 
-	right: 100px;
-    }
-    }
-    
-#ac {
-   margin-right: 0px;
-   display: inline-block;
-    border: none;
-    width: 500px;
-    height: 50px;
-    text-align: center; 
-    font-family: Garamond;
-    font-size: 30px;	
-}   
-  
-
-    
-.memory {
-	text-align: right;
-	font-size: 40px;
-	
-}
-</style>
-</head>
-  
+    display: inline-block;
+     border: none;
+     width: 500px;
+     height: 50px;
+     float: absolute;
+     text-align: center; 
+     font-family: Garamond;
+     font-size: 30px;	
+ }   
+   
  
-<body>
-	<div id = "ac" class = "line"> </div>
-	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
-	<button id = "button"> Click to run </button>  
-  <div id = "ship" > </div>
- <div class = "memory"> </div>
-	<h4> What's new </h4>
-	<ul>
-		<li> Base code updated </li>
-		<li> Logo added</li>
-		<li> BETA testing currently underway </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
-	</ul>
-	<div id = "gplus1" class="g-plusone"></div>
-
-<span id="signinButton">
-  <span
-    class="g-signin"
-    data-callback="signinCallback"
-    data-clientid="282071029207-b27g29g024rtb8kq21qf1u8gl2r14ean.apps.googleusercontent.com" 
-    data-cookiepolicy="single_host_origin"
-    data-requestvisibleactions="http://schema.org/AddAction"
-    data-scope="https://www.googleapis.com/auth/plus.login">
-  </span>
-</span>
-
-<script id="jsbin-javascript">
-// google+ button 
-function signinCallback(authResult) {
-  if (authResult['status']['signed_in']) {
-    // Update the app to reflect a signed in user
-    // Hide the sign-in button now that the user is authorized, for example:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
-  } else {
-    // Update the app to reflect a signed out user
-    // Possible error values:
-    //   "user_signed_out" - User is signed-out
-    //   "access_denied" - User denied access to your app
-    //   "immediate_failed" - Could not automatically log in the user
-    console.log('Sign-in state: ' + authResult['error']);
-  }
-}
+     
+ .memory {
+ 	text-align: right;
+ 	font-size: 40px;
+ 	
+ }
+ </style>
+ </head>
+   
+  
+ <body>
+ 	<div id = "ac" class = "line"> </div>
+ 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
+ 	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
+ 	<button id = "button"> Click to run </button>  
+   <div id = "ship" > </div>
+  <div class = "memory"> </div>
+ 	<h4> What's new </h4>
+ 	<ul>
+ 		<li> Base code updated </li>
+ 		<li> Logo added</li>
+ 		<li> BETA testing currently underway </li>
+ 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+ 	</ul>
+ 	
+ 
+ <span id="signinButton">
+   <span
+     class="g-signin"
+     data-callback="signinCallback"
+     data-clientid="282071029207-b27g29g024rtb8kq21qf1u8gl2r14ean.apps.googleusercontent.com" 
+     data-cookiepolicy="single_host_origin"
+     data-requestvisibleactions="http://schema.org/AddAction"
+     data-scope="https://www.googleapis.com/auth/plus.login">
+   </span>
+ </span>
+ 
+ <script id="jsbin-javascript">
+ // google+ button 
+ function signinCallback(authResult) {
+   if (authResult['status']['signed_in']) {
+     // Update the app to reflect a signed in user
+     // Hide the sign-in button now that the user is authorized, for example:
+     document.getElementById('signinButton').setAttribute('style', 'display: none');
+   } else {
+     // Update the app to reflect a signed out user
+     // Possible error values:
+     //   "user_signed_out" - User is signed-out
+     //   "access_denied" - User denied access to your app
+     //   "immediate_failed" - Could not automatically log in the user
+     console.log('Sign-in state: ' + authResult['error']);
+   }
+ }
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
