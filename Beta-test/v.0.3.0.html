@@ -157,12 +157,8 @@ var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-	if(randBoy === 'Wil Blount'){
-		document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " FRIENDZONE");
-	}
-	else {
         	document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
-	};
+
                         
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
@@ -178,6 +174,8 @@ var displayShip = function() {
     document.getElementById("ac").innerHTML = ("He's no Tom, but he'll have to do.");
     } else if (randBoy === ' Jayam Shah '){
      document.getElementById("ac").innerHTML = ("ARRE JAYAM!");
+    } else if (randBoy === ' Wil Blount '){
+     document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
      document.getElementById("ac").innerHTML = ("");
     
