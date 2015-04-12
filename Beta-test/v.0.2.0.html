@@ -2,6 +2,7 @@
 <html>
 	<head>
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -49,6 +50,12 @@ font-size: 1em;
     height: 60px;
     float: left;
     }
+#signinButton {
+	position: absolute;
+	top: 0px; 
+	right: 0px;
+	border: none;
+    }
     
 #ship {
    float: right;
@@ -88,19 +95,8 @@ font-size: 1em;
 <body>
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
-	<button id = "button"> Click to run </button>  
-  <div id = "ship" > </div>
- <div class = "memory"> </div>
-	<h4> What's new </h4>
-	<ul>
-		<li> Base code updated </li>
-		<li> Logo added</li>
-		<li> BETA testing currently underway </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
-	</ul>
-	
-
+	<p class = "line"> Academy Shipping Generator V.0.2.0 </p>
+	<div class="g-plusone"></div>
 <span id="signinButton">
   <span
     class="g-signin"
@@ -111,6 +107,18 @@ font-size: 1em;
     data-scope="https://www.googleapis.com/auth/plus.login">
   </span>
 </span>
+	<button id = "button"> Click to run </button>  
+  <div id = "ship" > </div>
+
+ <div class = "memory"> </div>
+	<h4> What's new </h4>
+	<ul>
+		<li> Base code updated </li>
+		<li> Logo added</li>
+		<li> BETA testing currently underway </li>
+		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+	</ul>
+	
 
 <script id="jsbin-javascript">
 // google+ button 
