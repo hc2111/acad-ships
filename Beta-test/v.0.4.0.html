@@ -155,13 +155,17 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 
-//var randShips = new Array(); //FOR MEMORY FUNCTION
+var allShips = []; //FOR MEMORY FUNCTION
+function acadShip(boy, girl) {
+    this.boy = boy;
+    this.girl = girl;
+};
 
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);	
-                //randShips[array.length] = (randBoy " and " randGirl); //FOR MEMORY FUNCTION
+                allShips[Array.length] = new acadShip(randBoy, randGirl); //FOR MEMORY FUNCTION
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
