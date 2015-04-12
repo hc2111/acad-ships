@@ -152,9 +152,11 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke '];
      
+//var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+//var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var displayShip = function() {
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-var displayShip = function() {
         	document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
 
                         
@@ -174,7 +176,7 @@ var displayShip = function() {
      document.getElementById("ac").innerHTML = ("ARRE JAYAM!");
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
-     //document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and FRIENDZONE");
+     document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and FRIENDZONE");
     } else  {
      document.getElementById("ac").innerHTML = ("");
     
