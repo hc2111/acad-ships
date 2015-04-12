@@ -172,7 +172,8 @@ function acadShip(boy, girl) {
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        	document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);	
+        	document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
+        	document.getElementById("ac").innerHTML = ("Testing!");
                 allShips[Array.length] = new acadShip(randBoy, randGirl); //FOR MEMORY FUNCTION
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
