@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
 <script src="https://apis.google.com/js/client:platform.js" async defer></script>
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -16,13 +17,16 @@
 body {
 background-color: #C6E2FF;
 }
+a {
+	display: inline-block;
+}
 p {
 font-family: Garamond; 
 font-weight: bold; 
 text-align: center; 
 font-size: 3em;
-float: absolute;
 margin-left: 300px;
+display: inline-block;
 }  
 h4 {
 font-family: Garamond;
@@ -60,7 +64,7 @@ font-size: 1em;
     
 #ac {
    float: right;
-   display: inline;
+   display: inline-block;
     border: none;
     width: 500px;
     height: 50px;
@@ -80,9 +84,9 @@ font-size: 1em;
   
  
 <body>
-	<div id = "ac"> </div>
-	<a href="https://97e086c7bbf4988e09a883d1602acf17af36d152.googledrive.com/host/0B8l2EdQqiJdxfjIzWXR0M0tTSndmd092SkRKcGE3NmJrQ0VMRVV5Wi1TUmRYVklzTFBCWFk/ship-logov0.2.png"></a> 
-	<p class = "para"> Academy Shipping Generator V.0.4.0 </p>
+	<div id = "ac" class = "line"> </div>
+	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
+	<p class = "line"> Academy Shipping Generator V.0.3.0 </p>
 	<div class = "result"> And your random ship is.....</div>
 	<button id = "button"> Click to run </button>  
   <div id = "ship" > </div>
@@ -108,8 +112,6 @@ font-size: 1em;
 </span>
 
 <script id="jsbin-javascript">
-
-
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
@@ -150,9 +152,9 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var displayShip = function() {
-                       var randBoy = acadBoys[Math.floor(Math.random() * 60)];
-                       var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);
+	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+        	document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
                         
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
@@ -167,7 +169,9 @@ var displayShip = function() {
     } else if (randBoy === ' Alex Powell ' && randGirl === 'Jane Halloran'){
     document.getElementById("ac").innerHTML = ("He's no Tom, but he'll have to do.");
     } else if (randBoy === ' Jayam Shah '){
-     document.getElementById("ac").innerHTML = ("AREY JAYAM!");
+     document.getElementById("ac").innerHTML = ("ARRE JAYAM!");
+    } else if (randBoy === ' Wil Blount '){
+     document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
      document.getElementById("ac").innerHTML = ("");
     
