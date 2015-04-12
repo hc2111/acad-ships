@@ -14,7 +14,6 @@
 	<title> Academy Shipping Generator </title>
  
 	<style id="jsbin-css">
-
 body {
 background-color: #C6E2FF;
 }
@@ -25,7 +24,7 @@ p {
 font-family: Garamond; 
 font-weight: bold; 
 text-align: center; 
-font-size: 3em;
+font-size: 40px;
 margin-left: 300px;
 display: inline-block;
 }  
@@ -44,7 +43,7 @@ font-size: 1em;
 #button {
     text-align: center; 
     font-family: Garamond; 
-    font-size: 40px;
+    font-size: 30px;
     display: inline-block;
     border: solid black 5px;
     width: 800px;
@@ -65,6 +64,19 @@ font-size: 1em;
     font-size: 25px;
     }
     
+    #signinButton {
+	position: absolute;
+	top: 10px; 
+	right: 10px;
+	border: none;
+    }
+#gplus1 {
+	position: relative;
+	top: 10px; 
+	right: 100px;
+    }
+    }
+    
 #ac {
    float: right;
    display: inline-block;
@@ -76,7 +88,13 @@ font-size: 1em;
     font-family: Garamond;
     font-size: 30px;	
 }   
-
+  
+    
+.memory {
+	text-align: right;
+	font-size: 40px;
+	
+}
 </style>
 </head>
   
@@ -84,10 +102,10 @@ font-size: 1em;
 <body>
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.3.0 </p>
+	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
 	<button id = "button"> Click to run </button>  
   <div id = "ship" > </div>
- 
+ <div class = "memory"> </div>
 	<h4> What's new </h4>
 	<ul>
 		<li> Base code updated </li>
@@ -95,7 +113,7 @@ font-size: 1em;
 		<li> BETA testing currently underway </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
 	</ul>
-	
+	<div id = "gplus1" class="g-plusone"></div>
 
 <span id="signinButton">
   <span
@@ -109,8 +127,6 @@ font-size: 1em;
 </span>
 
 <script id="jsbin-javascript">
-
-
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
@@ -148,14 +164,18 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke '];
      
- var randBoy = acadBoys[Math.floor(Math.random() * 61)];
- var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var allShips = []; //FOR MEMORY FUNCTION
+function acadShip(boy, girl) {
+    this.boy = boy;
+    this.girl = girl;
+}
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-	var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        	document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
-
-                        
+        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+        	document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);	
+                allShips[Array.length] = new acadShip(randBoy, randGirl); //FOR MEMORY FUNCTION
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
