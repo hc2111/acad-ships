@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	
+	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+	<script type="text/javascript" src="script.js">
+	
+	</script>
+	<title> Academy Shipping Generator </title>
+ 
+	<style id="jsbin-css">
+body {
+background-color: #C6E2FF;
+}
+
+p {
+font-family: Garamond; 
+font-weight: bold; 
+text-align: center; 
+font-size: 3em;
+}  
+
+
+h4 {
+font-family: Garamond;
+text-align: left; 
+font-size: 1em;
+margin-top: 100px;
+}
+
+ul {
+font-family: Courier;
+text-align: left; 
+font-size: 1em; 
+}
+
+#button {
+    text-align: center; 
+    font-family: Garamond; 
+    font-size: 40px;
+    display: inline-block;
+    border: solid black 5px;
+    width: 800px;
+    height: 50px;
+    float: left;
+    }
+    
+#ship {
+   float: right;
+   display: inline;
+    border: solid black 5px;
+    width: 700px;
+    height: 50px;
+    float: absolute;
+    text-align: center; 
+    font-family: Garamond;
+    font-size: 25px;
+    }
+    
+
+  
+.result {
+    text-align: right; 
+    font-size: 40px;
+      
+    }
+</style>
+</head>
+  
+ 
+<body>
+	
+	<p class = "para"> Academy Shipping Generator V.0.0.2 </p>
+	<div class = "result"> And your random ship is.....</div>
+	<button id = "button"> Click to run </button>  
+  <div id = "ship" > </div>
+	<h4> What's new </h4>
+	<ul>
+		<li> All names added</li>
+		<li> Base code updated </li>
+		<li> BETA testing currently underway </li>
+		<li> Google+ sign in option added </li>
+		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+	</ul>
+	
+
+<span id="signinButton">
+  <span
+    class="g-signin"
+    data-callback="signinCallback"
+    data-clientid="282071029207-b27g29g024rtb8kq21qf1u8gl2r14ean.apps.googleusercontent.com" // HARRIS WHATEVER YOU DO DO NOT TOUCH THIS
+    data-cookiepolicy="single_host_origin"
+    data-requestvisibleactions="http://schema.org/AddAction"
+    data-scope="https://www.googleapis.com/auth/plus.login">
+  </span>
+</span>
+
+<script id="jsbin-javascript">
+// google+ button 
+function signinCallback(authResult) {
+  if (authResult['status']['signed_in']) {
+    // Update the app to reflect a signed in user
+    // Hide the sign-in button now that the user is authorized, for example:
+    document.getElementById('signinButton').setAttribute('style', 'display: none');
+  } else {
+    // Update the app to reflect a signed out user
+    // Possible error values:
+    //   "user_signed_out" - User is signed-out
+    //   "access_denied" - User denied access to your app
+    //   "immediate_failed" - Could not automatically log in the user
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
+' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
+' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
+' Asher Kam ', ' Ashish Yalavarthi ', ' Ben White ', ' Wil Blount ', 
+' Brian Espinoza ', ' Chester Hall ', ' Chris Woods ',
+' Connor Shenberg ' , ' Daniel Hayes ', ' David Bueno ', ' Dharma Patel ',
+' Erik Cook ', ' Erik Madrid ', ' Evan Sattler ' ,
+' Nathaniel Fleig ', ' Hammad Imam ', ' Harris Mohamed ', ' Harry Chen ',
+' Hussain Rizvi ', ' Jake Dixon ', ' Jayam Shah ', ' John Bozeki ', ' John Magarzo ',
+' Josh Curtis ', ' Jay Thakkar ', ' Justin Bun ', ' Kevin Nguyen ', ' Nick Kirstein ',
+' Koyo Masore ', ' Nick O Brien ',  ' Sunny Patel ',' Pawel Rzucidlo ', ' Purav Shah ' , 
+' Quentin Gordon ', ' Ryan Roberts ',  ' Ryan Skyzypek ', ' Sahil Modi ', ' Sean Waite ',
+' Shil Shah ' ,' Max Smithberg ' ,' Thomas Radomski ', ' Xander Apponi '  ,
+' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
+' Nick Dawson ', ' Walter Gilbert ', 
+' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+
+var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
+'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
+'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
+'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
+'Hannah Melo', 'Brooke Bednarke '];
+     
+var randBoy = acadBoys[Math.floor(Math.random() * 61)];
+
+var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+
+var displayShip = function() {
+                       var randBoy = acadBoys[Math.floor(Math.random() * 60)];
+                       var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+                        document.getElementById("ship").innerHTML = ("The random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);       
+       };
+
+                        
+document.getElementById("button").addEventListener("click", displayShip);
+</script>
+ 
+</body>
+</html>
+
+
