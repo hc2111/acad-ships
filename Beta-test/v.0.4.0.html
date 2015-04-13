@@ -164,7 +164,7 @@ var displayShip = function() {
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
-        	 document.getElementById("memory").innerHTML = allShips;
+        	 /* document.getElementById("memory").innerHTML = allShips;*/
         	 makelist();
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
@@ -194,7 +194,7 @@ function makelist(){
         // You don't actually need this container to make it work
         var listContainer = document.createElement("div");
         // add it to the page
-        document.getElementsByTagName("memory")[0].appendChild(listContainer);
+        document.getElementsByTagName("body")[0].appendChild(listContainer);
         // Make the list itself which is a <ul>
         var listElement = document.createElement("ul");
        // add it to the page
