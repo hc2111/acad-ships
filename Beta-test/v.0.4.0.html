@@ -76,14 +76,7 @@
  }   
    
  
-     
- .memory {
- 	text-align: right;
- 	font-size: 35px;
- 	border: solid black 5px;
- 	height: 120px;
- 	width: 500px;
- }
+
  </style>
  </head>
    
@@ -94,7 +87,7 @@
  	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
  	<button id = "button"> Click to run </button>  
    <div id = "ship" > </div>
-  <div class = "memory"> </div>
+
  	<h4> What's new </h4>
  	<ul>
  		<li> Base code updated </li>
@@ -157,11 +150,7 @@ var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 
 
-var allShips = []; //FOR MEMORY FUNCTION - Sahil
-function acadShip(boy, girl) {
-    this.boy = boy;
-    this.girl = girl;
-} 
+
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
@@ -191,6 +180,13 @@ var displayShip = function() {
     
 }; 
        };
+
+var allShips = []; //FOR MEMORY FUNCTION - Sahil
+function acadShip(boy, girl) {
+    this.randBoy = boy;
+    this.randGirl = girl;
+} 
+
  function makelist(){ //FIX THE HTML, idk what I'm doing
                                 
 	// Establish the array which acts as a data source for the list
