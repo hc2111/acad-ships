@@ -157,8 +157,8 @@ var displayShip = function() {
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	
         
-        	/* allShips.push(new acadShip(randBoy, randGirl)); 
-        	 makelist(); */
+        	allShips.push(randBoy, randGirl); 
+        	 makelist();
         	 /*var x = allShips//This sets a new obj in Array
             	 document.getElementById("memory").innerHTML = (x) //THIS READS THE ARRE JAYAM */
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
@@ -178,21 +178,22 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("");
+     document.getElementById("ac").innerHTML = (""); 
+    }; 
      
-     function Ship (randBoy, randGirl) {
+     /*function Ship (randBoy, randGirl) { dont need this
      	
-     }
+     }*/ 
      
     
-}; 
+
        };
 
 /*var allShips = []; //FOR MEMORY FUNCTION - Sahil
 function acadShip(boy, girl) {
     this.randBoy = boy;
     this.randGirl = girl;
-} 
+} */
 
  function makelist(){ //FIX THE HTML, idk what I'm doing
                                 
@@ -224,9 +225,9 @@ function acadShip(boy, girl) {
                 listItem.innerHTML = listData[i];
 
                 // add listItem to the listElement
-                listElement.appendChild(listItem.String());
+                listElement.appendChild(listItem);
  
-        } */
+        }
 };
 
 document.getElementById("button").addEventListener("click", displayShip);
