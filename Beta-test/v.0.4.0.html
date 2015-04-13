@@ -106,7 +106,7 @@
  		<li> Base code updated </li>
  		<li> Memory added</li>
  		<li> BETA testing currently underway </li>
- 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+ 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com OR sm34524@gmail.com </li> 
  	</ul>
  	</div>
  
@@ -192,20 +192,19 @@ var displayShip = function() {
        };
 function makelist(){
                                
-	// Establish the array which acts as a data source for the list
-        var listData = allShips;
+	var listData = allShips;
         // Make a container element for the list - which is a <div>
         // You don't actually need this container to make it work
-         // add it to the page
-        document.getElementsByTagName("body")[0].appendChild("memory");
-        // Make the list itself which is a <ul>
-       var listElement = document.createElement("ul");
+        var listContainer = document.createElement("div");
         // add it to the page
-        memory.appendChild(listElement);
-       // Set up a loop that goes through the items in listItems one at a time
-        var numberOfListItems = listData.length;
+        document.getElementsByTagName("body")[0].appendChild(listContainer);
+        // Make the list itself which is a <ul>
+        var listElement = document.createElement("ul");
+       // add it to the page
+        listContainer.appendChild(listElement);
+       var numberOfListItems = listData.length;
                // create a <li> for each one.
-                var listItem = memory.createElement("li");
+                var listItem = document.createElement("li");
                 // add the item text
                 listItem.innerHTML = listData[(numberOfListItems-1)];
                 // add listItem to the listElement
