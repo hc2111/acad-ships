@@ -73,7 +73,14 @@
      text-align: center; 
      font-family: Garamond;
      font-size: 30px;	
- }   
+ } 
+ #memory {
+	text-align: right;
+ 	font-size: 15px;
+ 	border: solid black 5px;
+ 	height: 120px;
+	width: 500px;
+}
    
  
 
@@ -87,7 +94,7 @@
  	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
  	<button id = "button"> Click to run </button>  
    <div id = "ship" > </div>
-
+   <div id = "memory" class = "line">  </div>
  	<h4> What's new </h4>
  	<ul>
  		<li> Base code updated </li>
@@ -149,16 +156,12 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
-/*function acadShip(boy, girl) { this broke it because it added keys
-    this.boy = boy;
-    this.girl = girl;
-} */
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push(randBoy, randGirl); 
-        	 makelist();
+        	 document.getElementById("memory").innerHTML = allShips;
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -180,31 +183,6 @@ var displayShip = function() {
     
 }; 
        };
- function makelist(){ //FIX THE HTML, idk what I'm doing
-                                
-	// Establish the array which acts as a data source for the list
-        var listData = allShips;
-        // Make a container element for the list - which is a <div>
-        // You don't actually need this container to make it work
-        var listContainer = document.createElement("div");
-         // add it to the page
-        document.getElementsByTagName("body")[0].appendChild(listContainer);
-        // Make the list itself which is a <ul>
-        var listElement = document.createElement("ul");
-        // add it to the page
-         listContainer.appendChild(listElement);
-        // Set up a loop that goes through the items in listItems one at a time
-        var numberOfListItems = listData.length;
-        for( var i =  0 ; i < numberOfListItems ; ++i){
-                
-                // create a <li> for each one.
-                var listItem = document.createElement("li");
-                // add the item text
-                listItem.innerHTML = listData[i];
-                // add listItem to the listElement
-                listElement.appendChild(listItem);
-        }
-};
 document.getElementById("button").addEventListener("click", displayShip);
 </script>
  
