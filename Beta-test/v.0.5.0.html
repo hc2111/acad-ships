@@ -1,90 +1,104 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<!-- Favicon Init -->
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
+<!-- Google Plus Code Setup -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<!-- JQuery Setup -->
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	
-	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
-	<script type="text/javascript" src="script.js">
-	
-	</script>
-	<title> Academy Shipping Generator </title>
- 
-	<style id="jsbin-css">
+<!--Pure CSS Setup  -->	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+<script type="text/javascript" src="script.js">
+
+</script>
+<title> Academy Shipping Generator </title>
+ <style id="jsbin-css">
+
 body {
-background-color: #C6E2FF;
+	background-color: #C6E2FF;
 }
+
 a {
 	display: inline-block;
 }
+
 p {
-font-family: Garamond; 
-font-weight: bold; 
-text-align: center; 
-font-size: 3em;
-margin-left: 300px;
-line-height: 40px;
-display: inline-block;
+	font-family: Garamond; 
+	font-weight: bold; 
+	text-align: center; 
+	font-size: 3em;
+	margin-left: 300px;
+	line-height: 40px;
+	display: inline-block;
 }  
+
 h4 {
-font-family: Garamond;
-text-align: left; 
-font-size: 1em;
-margin-top: 100px;
+	font-family: Garamond;
+	text-align: left; 
+	font-size: 1em;
+	margin-top: 100px;
 }
+
 ul {
-font-family: Courier;
-text-align: left; 
-font-size: 1em; 
+	font-family: Courier;
+	text-align: left; 
+	font-size: 1em; 
 }
+
 #button {
-    text-align: center; 
-    font-family: Garamond; 
-    font-size: 40px;
-    display: inline-block;
-    border: solid black 5px;
-    width: 800px;
-    height: 60px;
-    float: left;
-    }
+	text-align: center; 
+	font-family: Garamond; 
+	font-size: 40px;
+	display: inline-block;
+	border: solid black 5px;
+	width: 800px;
+	height: 60px;
+	float: left;
+}
     
 #ship {
-    float: right;
-    display: inline;
-    border: solid black 5px;
-    width: 700px;
-    height: 50px;
-    float: absolute;
-    text-align: center; 
-    line-height: 40px;
-    font-family: Garamond;
-    font-size: 25px;
-    }
+	float: right;
+	display: inline;
+	border: solid black 5px;
+	width: 700px;
+	height: 50px;
+	float: absolute;
+	text-align: center; 
+	line-height: 40px;
+	font-family: Garamond;
+	font-size: 25px;
+}
+
 #signinButton {
 	position: absolute;
 	top: 10px; 
 	right: 10px;
 	border: none;
-    }
+}
+
 #gplus1 {
 	position: relative;
 	top: 10px; 
 	right: 100px;
-    }
+}
+    
 #ac {
-   float: right;
-   display: inline-block;
-    border: none;
-    width: 500px;
-    height: 50px;
-    float: absolute;
-    text-align: center; 
-    font-family: Garamond;
-    font-size: 30px;	
+	float: right;
+	display: inline-block;
+	border: none;
+	width: 500px;
+	height: 50px;
+	float: absolute;
+	text-align: center; 
+	font-family: Garamond;
+	font-size: 30px;	
 }   
 </style>
 </head>
@@ -95,6 +109,7 @@ font-size: 1em;
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
 	<p class = "line"> Academy Shipping Generator V.0.2.0 </p>
 
+	<!--Google+ Login  -->
 	<span id="signinButton">
 	  <span
 	    class="g-signin"
