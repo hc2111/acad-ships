@@ -155,15 +155,15 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
-function acadShip(boy, girl) {
+/*function acadShip(boy, girl) {
     this.boy = boy;
     this.girl = girl;
-} 
+} */
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-        	 allShips.push(new acadShip(randBoy, randGirl)); 
+        	 allShips.push(randBoy, randGirl); 
         	 makelist();
         	 /*var x = allShips//This sets a new obj in Array
             	 document.getElementById("memory").innerHTML = (x) //THIS READS THE ARRE JAYAM */
@@ -184,7 +184,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("");
+     document.getElementById("ac").innerHTML = ("Test");
     
 }; 
        };
