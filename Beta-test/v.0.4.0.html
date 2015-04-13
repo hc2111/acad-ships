@@ -159,13 +159,13 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
      
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-var allShips = []; //FOR MEMORY FUNCTION - Sahil
+/* var allShips = []; //FOR MEMORY FUNCTION - Sahil */
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-        	 allShips.push("The random ship is " + randBoy + " and " + randGirl); 
-        	 document.getElementById("memory").innerHTML = allShips.join();
+        	 /* allShips.push("The random ship is " + randBoy + " and " + randGirl); 
+        	 document.getElementById("memory").innerHTML = allShips.join(); */
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -188,6 +188,13 @@ var displayShip = function() {
 }; 
        };
 document.getElementById("button").addEventListener("click", displayShip);
+
+$(document).ready(function() {
+	$("button").click(function() {
+		var toAdd = $("ship").val();
+        $('memory').append("<p>"+toAdd+"</p>");	
+	});
+});
 </script>
  
 </body>
