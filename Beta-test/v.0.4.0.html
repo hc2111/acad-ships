@@ -85,6 +85,9 @@
 	font-family: Garamond;
 }
    
+#updates {
+	float:;
+}   
  
 
  </style>
@@ -98,14 +101,14 @@
  	<button id = "button"> Click to run </button>  
    <div id = "ship" > </div>
    <div id = "memory" class = "line">  </div>
- 	<h4> What's new </h4>
+ 	<div id = "updates"> What's new </div>
  	<ul>
  		<li> Base code updated </li>
  		<li> Memory added</li>
  		<li> BETA testing currently underway </li>
  		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
  	</ul>
- 	
+ 	</div>
  
  <span id="signinButton">
    <span
@@ -183,7 +186,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("Test8");
+     document.getElementById("ac").innerHTML = ("");
     
 }; 
        };
@@ -193,17 +196,16 @@ function makelist(){
         var listData = allShips;
         // Make a container element for the list - which is a <div>
         // You don't actually need this container to make it work
-        var listContainer = document.createElement("div");
          // add it to the page
-        document.getElementsByTagName("body")[0].appendChild(listContainer);
+        document.getElementsByTagName("body")[0].appendChild("memory");
         // Make the list itself which is a <ul>
        var listElement = document.createElement("ul");
         // add it to the page
-        listContainer.appendChild(listElement);
+        memory.appendChild(listElement);
        // Set up a loop that goes through the items in listItems one at a time
         var numberOfListItems = listData.length;
                // create a <li> for each one.
-                var listItem = document.createElement("li");
+                var listItem = memory.createElement("li");
                 // add the item text
                 listItem.innerHTML = listData[(numberOfListItems-1)];
                 // add listItem to the listElement
