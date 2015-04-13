@@ -193,14 +193,13 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("Test8");
+     document.getElementById("ac").innerHTML = ("Test9");
     
 }; 
        };
 function makelist(){
                                
-	// Establish the array which acts as a data source for the list
-        var listData = allShips;
+
         // Make a container element for the list - which is a <div>
         // You don't actually need this container to make it work
         var listContainer = document.createElement("div");
@@ -211,11 +210,10 @@ function makelist(){
         // add it to the page
         listContainer.appendChild(listElement);
        // Set up a loop that goes through the items in listItems one at a time
-        var numberOfListItems = listData.length;
                // create a <li> for each one.
                 var listItem = document.createElement("li");
                 // add the item text
-                listItem.innerHTML = listData[(numberOfListItems-1)];
+                listItem.innerHTML = listData[(allShips.length - 1)];
                 // add listItem to the listElement
                 listElement.appendChild(listItem);
 };
