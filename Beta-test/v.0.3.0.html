@@ -212,14 +212,12 @@ function makelist(){
         listContainer.appendChild(listElement);
        // Set up a loop that goes through the items in listItems one at a time
         var numberOfListItems = listData.length;
-               //for( var i =0; i < numberOfListItems; i++){
                // create a <li> for each one.
                 var listItem = document.createElement("li");
                 // add the item text
                 listItem.innerHTML = listData[(numberOfListItems-1)];
                 // add listItem to the listElement
                 listElement.appendChild(listItem);
-               //}
 };
 
 document.getElementById("button").addEventListener("click", displayShip);
