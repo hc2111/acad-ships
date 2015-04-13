@@ -38,6 +38,7 @@ font-family: Courier;
 text-align: left; 
 font-size: 1em; 
 }
+
 #button {
     text-align: center; 
     font-family: Garamond; 
@@ -73,8 +74,8 @@ font-size: 1em;
 	right: 100px;
     }
 #ac {
-   float: right;
-   display: inline-block;
+    float: right;
+    display: inline-block;
     border: none;
     width: 500px;
     height: 50px;
@@ -84,17 +85,16 @@ font-size: 1em;
     font-size: 30px;	
 }  
 #memory {
-	text-align: right;
+   	text-align: right;
  	font-size: 15px;
  	border: solid black 5px;
  	height: 120px;
-	width: 500px;
+	width: 1500px;
 }
+
 
 </style>
 </head>
-  
- 
 <body>
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
@@ -139,6 +139,7 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 }
+
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -191,9 +192,8 @@ var displayShip = function() {
     
 }; 
        };
-
 document.getElementById("button").addEventListener("click", displayShip);
+
 </script>
- 
 </body>
 </html>
