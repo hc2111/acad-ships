@@ -216,7 +216,7 @@ function makelist(){
                // create a <li> for each one.
                 var listItem = document.createElement("li");
                 // add the item text
-                listItem.innerHTML = listData[numberOfListItems];
+                listItem.innerHTML = listData[(numberOfListItems-1)];
                 // add listItem to the listElement
                 listElement.appendChild(listItem);
                //}
