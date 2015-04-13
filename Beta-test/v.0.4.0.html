@@ -192,16 +192,18 @@ function makelist(){
 	var listData = allShips;
         // Make a container element for the list - which is a <div>
         // You don't actually need this container to make it work
-        var listContainer = document.createElement("div");
+        
+        var listContainer = "#memory".createElement("div");
+        
         // add it to the page
-        document.getElementsByTagName("body")[0].appendChild(listContainer);
+        "#memory".appendChild(listContainer);
         // Make the list itself which is a <ul>
-        var listElement = document.createElement("ul");
+        var listElement = "#memory".createElement("ul");
        // add it to the page
         listContainer.appendChild(listElement);
        var numberOfListItems = listData.length;
                // create a <li> for each one.
-                var listItem = document.createElement("li");
+                var listItem = "#memory".createElement("li");
                 // add the item text
                 listItem.innerHTML = listData[(numberOfListItems-1)];
                 // add listItem to the listElement
