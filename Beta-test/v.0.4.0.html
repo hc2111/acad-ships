@@ -155,8 +155,10 @@ var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-        	 allShips.push(new acadShip(randBoy, randGirl)); 
-        	 makelist();
+        	
+        
+        	/* allShips.push(new acadShip(randBoy, randGirl)); 
+        	 makelist(); */
         	 /*var x = allShips//This sets a new obj in Array
             	 document.getElementById("memory").innerHTML = (x) //THIS READS THE ARRE JAYAM */
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
@@ -177,11 +179,16 @@ var displayShip = function() {
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
      document.getElementById("ac").innerHTML = ("");
+     
+     function Ship (randBoy, randGirl) {
+     	
+     }
+     
     
 }; 
        };
 
-var allShips = []; //FOR MEMORY FUNCTION - Sahil
+/*var allShips = []; //FOR MEMORY FUNCTION - Sahil
 function acadShip(boy, girl) {
     this.randBoy = boy;
     this.randGirl = girl;
@@ -218,8 +225,8 @@ function acadShip(boy, girl) {
 
                 // add listItem to the listElement
                 listElement.appendChild(listItem.String());
-
-        }
+ 
+        } */
 };
 
 document.getElementById("button").addEventListener("click", displayShip);
