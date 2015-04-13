@@ -117,13 +117,17 @@ font-size: 1em;
 	
 	<button id = "button"> Click to run </button>  
   	<div id = "ship" > </div>
-  	<div id = "memory" class = "line">  </div>
+  	<div id = "memory" class = "line">  
+  	<ul>
+		<li> TESTing</li> 
+	</ul>
+	</div>
 	<h4> What's new </h4>
 	<ul>
 		<li> Base code updated </li>
 		<li> Logo added</li>
 		<li> BETA testing currently underway </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com OR sm34524@gmail.com </li> 
 	</ul>
   	<div id = "gplus1" class="g-plusone"></div>
 
@@ -175,7 +179,7 @@ var displayShip = function() {
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
         	 //document.getElementById("memory").innerHTML = allShips;
-        	 makelist();
+        	 //makelist();
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -193,7 +197,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("Test15");
+     document.getElementById("ac").innerHTML = ("Test16");
     
 }; 
        };
