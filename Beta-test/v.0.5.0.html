@@ -21,19 +21,15 @@
 
 <link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
 <script type="text/javascript" src="script.js">
-
 </script>
 <title> Academy Shipping Generator </title>
  <style id="jsbin-css">
-
 body {
 	background-color: #C6E2FF;
 }
-
 a {
 	display: inline-block;
 }
-
 p {
 	font-family: Garamond; 
 	font-weight: bold; 
@@ -43,21 +39,41 @@ p {
 	line-height: 40px;
 	display: inline-block;
 }  
-
 h4 {
 	font-family: Garamond;
 	text-align: left; 
 	font-size: 1em;
 	margin-top: 100px;
 }
-
 ul {
 	font-family: Courier;
 	text-align: left; 
 	font-size: 1em; 
 }
-
-
+#button {
+    font-family: Garamond;
+	color: black;
+	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+	font-size: 300%;
+	display: inline-block;
+	width: 800px;
+	height: 60px;
+	border: solid black 5px;
+	border-radius: 10px;
+	background: lightgray;
+    }
+#button:hover {
+    font-family: Garamond;
+	color: black;
+	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+	font-size: 300%;
+	display: inline-block;
+	width: 800px;
+	height: 60px;
+	border: solid black 5px;
+	border-radius: 10px;
+	background: darkgray;
+    }
 #ship {
 	float: right;
 	display: inline;
@@ -70,14 +86,12 @@ ul {
 	font-family: Garamond;
 	font-size: 25px;
 }
-
 #signinButton {
 	position: absolute;
 	top: 10px; 
 	right: 10px;
 	border: none;
 }
-
 #gplus1 {
 	position: relative;
 	top: 10px; 
@@ -116,18 +130,7 @@ ul {
 	  </span>
 	</span>
 	
-	<div>
-	    <style scoped>
-	        .button-xlarge {
-		color: white;
-		border-radius: 4px;
-		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-		font-size: 200%;
-		background: rgb(198, 226, 255);
-	        }
-	    </style>
-	    <button class="button-xlarge pure-button" id="button">Click to Run</button>
-	</div>
+	<button class="pure-button" id="button">Click to Run</button>
   	<div id = "ship" > </div>
 	<h4> What's new </h4>
 	<ul>
