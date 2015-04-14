@@ -130,7 +130,11 @@ font-size: 1em;
 	
 	<button id = "button"> Click to run </button>  
   	<div id = "ship" > </div>
-  	<div id = "memory" class = "line">  </div>
+  	<div id = "memory" class = "line">  
+  	<ul>
+  		
+  	</ul>
+  	</div>
 	<h4> What's new </h4>
 	<ul>
 		<li> Base code updated </li>
@@ -209,7 +213,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("");
+     document.getElementById("ac").innerHTML = ("test1");
     
 }; 
        };
@@ -217,11 +221,11 @@ function makelist(){
                                
 	var listData = allShips;
 	var numberOfListItems = listData.length;
-        var elementDiv = document.createElement("div");
-        var elementUl = document.createElement("ul");
+        //var elementDiv = document.createElement("div");
+        //var elementUl = document.createElement("ul");
         var elementLi = document.createElement("li");
-        document.getElementById("memory").appendChild(elementDiv);
-        document.getElementById("memory").appendChild(elementUl);
+       //document.getElementById("memory").appendChild(elementDiv);
+        //document.getElementById("memory").appendChild(elementUl);
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
