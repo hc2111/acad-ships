@@ -108,7 +108,18 @@ ul {
 	text-align: center; 
 	font-family: Garamond;
 	font-size: 30px;	
-}   
+} 
+#memory {
+	text-align: right;
+ 	font-size: 20px;
+ 	height: 120px;
+	width: 525px;
+	float: right;
+	display: inline;
+	list-style: none;
+	font-family: Garamond;
+}
+
 </style>
 </head>
   
@@ -132,6 +143,7 @@ ul {
 	
 	<button class="pure-button" id="button">Click to Run</button>
   	<div id = "ship" > </div>
+  	<div id = "memory" class = "line">  </div>
 	<h4> What's new </h4>
 	<ul>
 		<li> Base code updated </li>
@@ -181,11 +193,14 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
      
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        	document.getElementById("ship").innerHTML = ("Your random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
-                        
+        	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
+        	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
+        	 //document.getElementById("memory").innerHTML = allShips;
+        	 makelist();
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -207,9 +222,19 @@ var displayShip = function() {
     
 }; 
        };
-                        
+function makelist(){
+                               
+	var listData = allShips;
+	var numberOfListItems = listData.length;
+        var elementDiv = document.createElement("div");
+        var elementUl = document.createElement("ul");
+        var elementLi = document.createElement("li");
+        document.getElementById("memory").appendChild(elementDiv);
+        document.getElementById("memory").appendChild(elementUl);
+                elementLi.innerHTML = listData[(numberOfListItems-1)];
+                document.getElementById("memory").appendChild(elementLi);
+};
 document.getElementById("button").addEventListener("click", displayShip);
 </script>
- 
 </body>
 </html>
