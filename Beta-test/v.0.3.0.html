@@ -25,10 +25,9 @@ body {
 background-color: #C6E2FF;
 }
 a {display: inline-block;}
-p {
+#p {
 font-family: Garamond; 
 font-weight: bold; 
-text-align: center; 
 font-size: 40px;
 margin-left: auto;
 margin-right: auto;
@@ -64,7 +63,7 @@ font-size: 1em;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	font-size: 300%;
 	display: inline-block;
-	width: 800px;
+	width: 775px;
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
@@ -133,7 +132,7 @@ font-size: 1em;
 
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.3.0 </p>
+	<div id = "p" class = "line"> Academy Shipping Generator V.0.3.0 </p>
 
 	<span id="signinButton">
 	  <span
@@ -251,7 +250,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("test1");
+     document.getElementById("ac").innerHTML = ("test2");
     
 }; 
        };
