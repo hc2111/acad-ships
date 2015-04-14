@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<!-- Favicon Init -->
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
+<!-- Google Plus Code Setup -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<!-- JQuery Setup -->
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	
-	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
-	<script type="text/javascript" src="script.js">
-	
-	</script>
-	<title> Academy Shipping Generator </title>
+<!--Pure CSS Setup  -->	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<!--<![endif]-->
+
+<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+<script type="text/javascript" src="script.js">
+</script>
+<title> Academy Shipping Generator </title>
+ <style id="jsbin-css">
  
-	<style id="jsbin-css">
 body {
 background-color: #C6E2FF;
 }
@@ -38,7 +48,6 @@ font-family: Courier;
 text-align: left; 
 font-size: 1em; 
 }
-
 #button {
     font-family: Garamond;
 	color: black;
@@ -101,7 +110,7 @@ font-size: 1em;
 #memory {
 	text-align: right;
  	font-size: 20px;
- 	height: 120px;
+ 	height: 20px;
 	width: 525px;
 	float: right;
 	display: inline;
@@ -113,7 +122,7 @@ font-size: 1em;
 <body>
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.4.0 </p>
+	<p class = "line"> Academy Shipping Generator V.0.3.0 </p>
 
 	<span id="signinButton">
 	  <span
@@ -128,13 +137,16 @@ font-size: 1em;
 	
 	<button id = "button"> Click to run </button>  
   	<div id = "ship" > </div>
-  	<div id = "memory" class = "line">  </div>
+  
+  	<div id = "memory" class = "line">
+  	<ul></ul>
+  	</div>
+  	
 	<h4> What's new </h4>
 	<ul>
 		<li> Base code updated </li>
 		<li> Logo added</li>
 		<li> BETA testing currently underway </li>
-		<li> Added the ability to recognize true love </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com OR sm34524@gmail.com </li> 
 	</ul>
   	<div id = "gplus1" class="g-plusone"></div>
@@ -177,15 +189,17 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke '];
      
-var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var randBoy = 0;
+var randGirl = 0;
+var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
+	clickCount++;
+	document.getElementById("button").innerHTML = ("You've created " + clickCount + " ships!");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
-        	 //document.getElementById("memory").innerHTML = allShips;
         	 makelist();
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
@@ -209,28 +223,13 @@ var displayShip = function() {
 }; 
        };
 function makelist(){
-                               
 	var listData = allShips;
 	var numberOfListItems = listData.length;
-        var elementDiv = document.createElement("div");
-        var elementUl = document.createElement("ul");
         var elementLi = document.createElement("li");
-        document.getElementById("memory").appendChild(elementDiv);
-        document.getElementById("memory").appendChild(elementUl);
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
 document.getElementById("button").addEventListener("click", displayShip);
-
-$(document).ready(function () {
-    $("button").click(function () {
-        var count = $(this).data("count") || 0;
-        $(this).data("count", ++count);
-        $("ship").html("count");
-    });
-});
-
 </script>
-
 </body>
 </html>
