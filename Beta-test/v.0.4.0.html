@@ -202,7 +202,7 @@ function makelist(){
         document.getElementById("memory").appendChild(elementDiv);
         document.getElementById("memory").appendChild(elementUl);
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
-                document.getElementById("memory").innerHTML(elementLi);
+                document.getElementById("memory").appendChild(elementLi);
 };
 document.getElementById("button").addEventListener("click", displayShip);
 </script>
