@@ -193,7 +193,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("Test25");
+     document.getElementById("ac").innerHTML = ("Test30");
     
 }; 
        };
@@ -204,8 +204,8 @@ function makelist(){
         var elementDiv = document.createElement("div");
         var elementUl = document.createElement("ul");
         var elementLi = document.createElement("li");
-        document.getElementsByTagName("memory").appendChild(elementDiv);
-        document.getElementsByTagName("memory").appendChild(elementUl);
+        document.getElementById("memory").appendChild(elementDiv);
+        document.getElementById("memory").appendChild(elementUl);
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
