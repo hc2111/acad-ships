@@ -2,39 +2,34 @@
 <html>
 	<head>
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script> 
 <script src="https://apis.google.com/js/client:platform.js" async defer></script>
-<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
 	<script type="text/javascript" src="script.js">
 	
 	</script>
 	<title> Academy Shipping Generator </title>
- 
+	
 	<style id="jsbin-css">
+ 
 body {
 background-color: #C6E2FF;
 }
-a {
-	display: inline-block;
-}
+a {display: inline-block;}
 p {
 font-family: Garamond; 
 font-weight: bold; 
-text-align: center; 
-font-size: 3em;
+font-size: 40px;
 margin-left: 300px;
-line-height: 40px;
 display: inline-block;
 }  
 h4 {
 font-family: Garamond;
 text-align: left; 
-font-size: 1em;
-margin-top: 100px;
+font-size: 20px;
+margin-top: 25px;
 }
 ul {
 font-family: Courier;
@@ -42,19 +37,35 @@ text-align: left;
 font-size: 1em; 
 }
 #button {
-    text-align: center; 
-    font-family: Garamond; 
-    font-size: 40px;
-    display: inline-block;
-    border: solid black 5px;
-    width: 800px;
-    height: 60px;
-    float: left;
+    font-family: Garamond;
+	color: black;
+	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+	font-size: 300%;
+	display: inline-block;
+	width: 775px;
+	height: 60px;
+	border: solid black 5px;
+	border-radius: 10px;
+	background: lightgray;
+    }
+#button:hover {
+    font-family: Garamond;
+	color: black;
+	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+	font-size: 300%;
+	display: inline-block;
+	width: 750px;
+	height: 60px;
+	border: solid black 5px;
+	border-radius: 10px;
+	background: darkgray;
     }
     
 #ship {
     float: right;
     display: inline;
+    text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+    border-radius: 10px;
     border: solid black 5px;
     width: 700px;
     height: 50px;
@@ -76,8 +87,8 @@ font-size: 1em;
 	right: 100px;
     }
 #ac {
-   float: right;
-   display: inline-block;
+    float: right;
+    display: inline-block;
     border: none;
     width: 500px;
     height: 50px;
@@ -85,27 +96,53 @@ font-size: 1em;
     text-align: center; 
     font-family: Garamond;
     font-size: 30px;	
-}   
-
+}  
+#memory {
+	text-align: right;
+ 	font-size: 20px;
+ 	height: 20px;
+	width: 525px;
+	float: right;
+	display: inline;
+	list-style: none;
+	font-family: Garamond;
+}
 </style>
 </head>
-  
- 
 <body>
+<div id="fb-root"></div>
+
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.2.0 </p>
+	<p class = "line"> Academy Shipping Generator V.0.3.0 </p>
 
+	<span id="signinButton">
+	  <span
+	    class="g-signin"
+	    data-callback="signinCallback"
+	    data-clientid="282071029207-b27g29g024rtb8kq21qf1u8gl2r14ean.apps.googleusercontent.com" 
+	    data-cookiepolicy="single_host_origin"
+	    data-requestvisibleactions="http://schema.org/AddAction"
+	    data-scope="https://www.googleapis.com/auth/plus.login">
+	  </span>
+	</span>
+	
 	<button id = "button"> Click to run </button>  
   	<div id = "ship" > </div>
+  
+  	<div id = "memory" class = "line">
+  		<h4>Previously created ships:</h4>
+  	<ul></ul>
+  	</div>
+  	
 	<h4> What's new </h4>
-	<ul>
+	<ul> 
 		<li> Base code updated </li>
 		<li> Logo added</li>
-		<li> Basic Achievements Added</li>
 		<li> BETA testing currently underway </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li>
+		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com OR sm34524@gmail.com </li>
 	</ul>
+		 
   	<div id = "gplus1" class="g-plusone"></div>
 
 <script id="jsbin-javascript">
@@ -146,13 +183,18 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke '];
      
-var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+var randBoy = 0;
+var randGirl = 0;
+var clickCount = 0;
+var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
+	clickCount++;
+	document.getElementById("button").innerHTML = ("You've created " + clickCount + " ships!");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        	document.getElementById("ship").innerHTML = ("Your random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
-                        
+        	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
+        	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
+        	 makelist();
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -174,10 +216,13 @@ var displayShip = function() {
     
 }; 
        };
-                        
+function makelist(){
+	var listData = allShips;
+	var numberOfListItems = listData.length;
+        var elementLi = document.createElement("li");
+                elementLi.innerHTML = listData[(numberOfListItems-1)];
+                document.getElementById("memory").appendChild(elementLi);
+};
 document.getElementById("button").addEventListener("click", displayShip);
 </script>
- 
 </body>
-</html>
-
