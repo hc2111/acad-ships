@@ -190,8 +190,8 @@ var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	clickCount++;
 	document.getElementById("button").innerHTML = ("You've created " + clickCount + " ships!");
-	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
+	var randBoy = acadBoys[Math.floor(Math.random() * 62)];
+        var randGirl = acadGirls[Math.floor(Math.random() * 21)]; //math.floor() always rounds down
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
         	 //document.getElementById("memory").innerHTML = allShips;
