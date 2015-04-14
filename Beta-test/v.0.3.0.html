@@ -123,6 +123,15 @@ font-size: 1em;
 </style>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	
 	<div id = "ac" class = "line"> </div>
 	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
 	<p class = "line"> Academy Shipping Generator V.0.3.0 </p>
@@ -153,8 +162,20 @@ font-size: 1em;
 		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com OR sm34524@gmail.com </li> 
 	</ul>
   	<div id = "gplus1" class="g-plusone"></div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a> 
+<script>!function(d,s,id){
+var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+if(!d.getElementById(id)){js=d.createElement(s);
+js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+fjs.parentNode.insertBefore(js,fjs);
+}}(document, 'script', 'twitter-wjs');
+</script>
+
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
+data-layout="standard" data-action="like" data-show-faces="true" data-share="true">
+</div>
+
 <script id="jsbin-javascript">
 // google+ button 
 function signinCallback(authResult) {
