@@ -221,6 +221,16 @@ function makelist(){
                 document.getElementById("memory").appendChild(elementLi);
 };
 document.getElementById("button").addEventListener("click", displayShip);
+
+$(document).ready(function () {
+    $("button").click(function () {
+        var count = $(this).data("count") || 0;
+        $(this).data("count", ++count);
+        $("h4").innerHTML(count)
+    });
+});
+
 </script>
+
 </body>
 </html>
