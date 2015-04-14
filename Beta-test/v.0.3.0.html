@@ -184,7 +184,7 @@ var randGirl = acadGirls[Math.floor(Math.random() * 20)];
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var clickCount = 0;
 var displayShip = function() {
-	clickCount = clickCount + 1;
+	clickCount++;
 	document.getElementById("button").innerHTML = ("You've created " + clickCount + " ships!");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
