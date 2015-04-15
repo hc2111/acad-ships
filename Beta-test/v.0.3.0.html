@@ -49,6 +49,7 @@ ul {
 	background: lightgray;
     }
 #button:hover {background: darkgray;}
+
 #ship {
 	float: right;
 	display: inline;
@@ -250,6 +251,15 @@ document.getElementById("ship").style.border = "solid #000000 5px";
 	document.getElementById("button").style.border = "solid #000000 5px";
 	document.getElementById("button").style.color = "#000000";
 	document.getElementById("button").style.background = "lightgray";
+    var hoverV='a:hover{background-color: darkgray;}'; //This lets the hover return to its original properties
+	style=document.createElement('style');
+	if (style.styleSheet){
+    	style.styleSheet.cssText=css;
+	}
+	else {
+    		style.appendChild(document.createTextNode(css));
+		document.getElementsByTagName('head')[0].appendChild(style);
+	} //end hover restore
 document.getElementById("themeB").style.border = "solid #000000 5px";
 	document.getElementById("themeB").style.color = "#000000";
 	document.getElementById("themeB").style.background = "lightgray";
