@@ -1,113 +1,110 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
-	<script src="https://apis.google.com/js/platform.js" async defer></script> 
-	<script src="https://apis.google.com/js/client:platform.js" async defer></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon Init -->
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
+<!-- Google Plus Code Setup -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/client:platform.js" async defer></script>
+<!-- JQuery Setup
+<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
+<!--Pure CSS Setup  -->	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<!--<![endif]-->
 
-	<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
-	<script type="text/javascript" src="script.js">
-	
-	</script>
-	
-	<title> Academy Shipping Generator </title>
-	
-	<style id="stylesheet.css">
- 
-body {
-	background-color: #C6E2FF;
-	
-}
-
-a {
-	display: inline-block;
-	
-}
-
-p {
-	font-family: Garamond; 
-	font-weight: bold; 
-	text-align: center; 
-	font-size: 40px;
-	margin: auto;
-	margin-bottom: 25px;
-}  
-
+<link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
+<script type="text/javascript" src="script.js">
+</script>
+<title> Academy Shipping Generator </title>
+ <style id="jsbin-css">
+body {background-color: #C6E2FF;}
 h4 {
 	font-family: Garamond;
 	text-align: left; 
-	font-size: 20px;
-	margin-top: 25px;
+	font-size: 1em;
+	margin-top: 50px;
 }
-
 ul {
 	font-family: Courier;
 	text-align: left; 
 	font-size: 1em; 
 }
-
+#logo {
+}
+#container {width:100%;}
+#title {
+	position: relative;
+	text-align: center;
+	font-family: Garamond; 
+	font-weight: bold; 
+	font-size: 3em;
+}  
 #button {
-    font-family: Garamond;
+    float: left;
+	font-family: Garamond;
 	color: black;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	font-size: 300%;
-	display: inline-block;
-	width: 775px;
+	width: 49%;
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
     }
-    
 #button:hover {
+    float: left;
+	font-family: Garamond;
+	color: black;
+	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+	font-size: 300%;
+	width: 50%
+	height: 60px;
+	border: solid black 5px;
+	border-radius: 10px;
 	background: darkgray;
-	
-}
-
+    }
 #ship {
 	float: right;
-	display: inline;
-	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
-	border-radius: 10px;
 	border: solid black 5px;
-	width: 700px;
+	width: 49%;
 	height: 50px;
-	float: absolute;
 	text-align: center; 
 	line-height: 40px;
+	border-radius: 10px;
 	font-family: Garamond;
 	font-size: 25px;
-    }
-    
+}
 #signinButton {
 	position: absolute;
 	top: 10px; 
 	right: 10px;
 	border: none;
-    }
-    
+}
 #gplus1 {
 	position: relative;
 	top: 10px; 
 	right: 100px;
-    }
+}
     
 #ac {
-	float: right;
 	display: inline-block;
 	border: none;
-	width: 500px;
-	height: 50px;
-	float: absolute;
 	text-align: center; 
 	font-family: Garamond;
-	font-size: 30px;	
-    }  
-    
+	font-size: 30px;
+	float: right;
+	margin.right: auto;
+}   
 #memory {
 	text-align: right;
- 	font-size: 20px;
+ 	font-size: 1em;
  	height: 20px;
 	width: 525px;
 	float: right;
@@ -115,8 +112,7 @@ ul {
 	list-style: none;
 	font-family: Garamond;
 }
-
-#colorInverter {
+#themeB {
 	font-family: Garamond;
 	color: black;
 	font-size: 20px;
@@ -128,16 +124,17 @@ ul {
 	border-radius: 10px;
 	background: lightgray;
 }
-
 </style>
 </head>
 <body>
-	
-	<div id="fb-root"></div>
-	<div id = "ac" class = "line"> </div>
-	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.4.1 </p>
 
+	<div id = "ac" class = "line"> </div>
+
+	<div id= "container">
+		 <div id = "logo" > <img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"> </div>
+		 <div id = "title"> Academy Shipping Generator V.0.4.1 </div>
+	</div>
+	
 	<span id="signinButton">
 	  <span
 	    class="g-signin"
@@ -149,28 +146,27 @@ ul {
 	  </span>
 	</span>
 	
-	<button id = "button"> Click to run </button>  
-	
+	<button id = "button"> Click to Run </button>  
   	<div id = "ship" > </div>
   
   	<div id = "memory" class = "line">
-  		<h4> Previously created ships:</h4>
-  	<ul> </ul>
+  		<h4>Ships log:</h4>
+  	<ul></ul>
   	</div>
   	
 	<h4> What's new </h4>
 	<ul> 
+		<li> Inverted colors! </li>
 		<li> Base code updated </li>
 		<li> BETA testing currently underway </li>
-		<li> Inverted Colors! </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
 	</ul>
 		 
   	<div id = "gplus1" class="g-plusone"></div>
   	
-  	<button id = "colorInverter"> Invert Colors </button>
+  	<button id = "themeB"> Change Theme </button>
 
-<script id="script.js">
+<script id="jsbin-javascript">
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
@@ -186,7 +182,6 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 };
-
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -203,8 +198,6 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
 ' Nick Dawson ', ' Walter Gilbert ', 
 ' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
-
-
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
 'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
@@ -217,16 +210,12 @@ var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	clickCount++;
-	
-	document.getElementById("button").innerHTML = (clickCount + " ships have been created");
-	
+	document.getElementById("button").innerHTML = ( clickCount + " ships have been created.");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        
-        document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
+        	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
         	 makelist();
-        	 
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -244,11 +233,10 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("");
+     document.getElementById("ac").innerHTML = ("test2");
     
 }; 
        };
-       
 function makelist(){
 	var listData = allShips;
 	var numberOfListItems = listData.length;
@@ -256,10 +244,8 @@ function makelist(){
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
-
 var theme = 0;
-
-function colorChange() {
+function bgTheme() {
     if (theme === 0){
 	document.body.style.backgroundColor = "#000000";
 	document.body.style.color = "#FFFFFF";
@@ -284,14 +270,14 @@ document.getElementById("ship").style.border = "solid #000000 5px";
 	style=document.createElement('style');
     	style.appendChild(document.createTextNode(hoverV));
 	document.getElementsByTagName('head')[0].appendChild(style);  //end hover restore
-document.getElementById("colorInverter").style.border = "solid #000000 5px";
-	document.getElementById("colorInverter").style.color = "#000000";
-	document.getElementById("colorInverter").style.background = "lightgray";
+document.getElementById("themeB").style.border = "solid #000000 5px";
+	document.getElementById("themeB").style.color = "#000000";
+	document.getElementById("themeB").style.background = "lightgray";
 	theme = 0;
 	}
 };
 document.getElementById("button").addEventListener("click", displayShip);
-document.getElementById("colorInverter").addEventListener("click", colorChange);
+document.getElementById("themeB").addEventListener("click", bgTheme);
 </script>
 </body>
 </html>
