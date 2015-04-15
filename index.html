@@ -127,6 +127,8 @@ img.resize{
 	border-radius: 10px;
 	background: lightgray;
 }
+
+
 </style>
 </head>
 <body>
@@ -185,6 +187,7 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 };
+
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -247,6 +250,7 @@ function makelist(){
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
+
 var theme = 0;
 function bgTheme() {
     if (theme === 0){
@@ -270,10 +274,12 @@ document.getElementById("ship").style.border = "solid #000000 5px";
 	document.getElementById("buttonShip").style.border = "solid #000000 5px";
 	document.getElementById("buttonShip").style.color = "#000000";
 	document.getElementById("buttonShip").style.background = "lightgray";
-    var hoverV='button:hover{background-color: darkgray;}'; //This lets the hover return to its original properties
-	style=document.createElement('style');
-    	style.appendChild(document.createTextNode(hoverV));
-	document.getElementsByTagName('head')[0].appendChild(style);  //end hover restore
+
+document.getElementById("buttonShip").onmouseover = function() {
+    this.style.backgroundColor = "darkgray";}
+document.getElementById("buttonShip").onmouseout = function() {
+    this.style.backgroundColor = "lightgray";}
+
 document.getElementById("themeB").style.border = "solid #000000 5px";
 	document.getElementById("themeB").style.color = "#000000";
 	document.getElementById("themeB").style.background = "lightgray";
@@ -281,8 +287,10 @@ document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111
 	theme = 0;
 	}
 };
+
 document.getElementById("buttonShip").addEventListener("click", displayShip);
 document.getElementById("themeB").addEventListener("click", bgTheme);
+
 </script>
 </body>
 </html>
