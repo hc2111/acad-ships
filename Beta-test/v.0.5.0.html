@@ -27,18 +27,7 @@
 body {
 	background-color: #C6E2FF;
 }
-a {
-	display: inline-block;
-}
-p {
-	font-family: Garamond; 
-	font-weight: bold; 
-	text-align: center; 
-	font-size: 3em;
-	margin-left: 300px;
-	line-height: 40px;
-	display: inline-block;
-}  
+
 h4 {
 	font-family: Garamond;
 	text-align: left; 
@@ -50,25 +39,35 @@ ul {
 	text-align: left; 
 	font-size: 1em; 
 }
+#logo {
+}
+#container {width:100%;}
+#title {
+	position: relative;
+	text-align: center;
+	font-family: Garamond; 
+	font-weight: bold; 
+	font-size: 3em;
+}  
 #button {
-    font-family: Garamond;
+    float: left;
+	font-family: Garamond;
 	color: black;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	font-size: 300%;
-	display: inline-block;
-	width: 800px;
+	width: 49%;
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
     }
 #button:hover {
-    font-family: Garamond;
+    float: left;
+	font-family: Garamond;
 	color: black;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	font-size: 300%;
-	display: inline-block;
-	width: 800px;
+	width: 50%
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
@@ -76,13 +75,12 @@ ul {
     }
 #ship {
 	float: right;
-	display: inline;
 	border: solid black 5px;
-	width: 700px;
+	width: 49%;
 	height: 50px;
-	float: absolute;
 	text-align: center; 
 	line-height: 40px;
+	border-radius: 10px;
 	font-family: Garamond;
 	font-size: 25px;
 }
@@ -99,36 +97,31 @@ ul {
 }
     
 #ac {
-	float: right;
 	display: inline-block;
 	border: none;
-	width: 500px;
-	height: 50px;
-	float: absolute;
 	text-align: center; 
 	font-family: Garamond;
 	font-size: 30px;	
-} 
-#memory {
-	text-align: right;
- 	font-size: 20px;
- 	height: 120px;
-	width: 525px;
-	float: right;
-	display: inline;
-	list-style: none;
-	font-family: Garamond;
-}
-
+}   
 </style>
 </head>
   
  
 <body>
-	<div id = "ac" class = "line"> </div>
-	<a class = "line"><img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"></a> 
-	<p class = "line"> Academy Shipping Generator V.0.5.0 </p>
-
+		<div id= "container">
+			 <div id = "logo" > <img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"> </div>
+			 <div id = "title"> Academy Shipping Generator V.0.5.0 </div>
+		</div>
+		<button id="button">Click to Run</button>
+		<div id = "ship"> </div>
+		<h4> What's new </h4>
+			<ul>
+				<li> Base code updated </li>
+				<li> Logo added</li>
+				<li> BETA testing currently underway </li>
+				<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
+			</ul>
+		<div id = "gplus1" class="g-plusone"></div>
 	<!--Google+ Login  -->
 	<span id="signinButton">
 	  <span
@@ -139,19 +132,8 @@ ul {
 	    data-requestvisibleactions="http://schema.org/AddAction"
 	    data-scope="https://www.googleapis.com/auth/plus.login">
 	  </span>
-	</span>
+	</span> 
 	
-	<button class="pure-button" id="button">Click to Run</button>
-  	<div id = "ship" > </div>
-  	<div id = "memory" class = "line">  </div>
-	<h4> What's new </h4>
-	<ul>
-		<li> Base code updated </li>
-		<li> Logo added</li>
-		<li> BETA testing currently underway </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at harrism436@gmail.com </li> 
-	</ul>
-  	<div id = "gplus1" class="g-plusone"></div>
 
 <script id="jsbin-javascript">
 // google+ button 
@@ -193,14 +175,11 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
      
 var randBoy = acadBoys[Math.floor(Math.random() * 61)];
 var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-        	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
-        	 //document.getElementById("memory").innerHTML = allShips;
-        	 makelist();
+        	document.getElementById("ship").innerHTML = ("Your random ship is"  + "" + randBoy + "" + "and" + " " + randGirl);	
+                        
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
@@ -222,19 +201,9 @@ var displayShip = function() {
     
 }; 
        };
-function makelist(){
-                               
-	var listData = allShips;
-	var numberOfListItems = listData.length;
-        var elementDiv = document.createElement("div");
-        var elementUl = document.createElement("ul");
-        var elementLi = document.createElement("li");
-        document.getElementById("memory").appendChild(elementDiv);
-        document.getElementById("memory").appendChild(elementUl);
-                elementLi.innerHTML = listData[(numberOfListItems-1)];
-                document.getElementById("memory").appendChild(elementLi);
-};
+                        
 document.getElementById("button").addEventListener("click", displayShip);
 </script>
+ 
 </body>
 </html>
