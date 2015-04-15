@@ -66,7 +66,7 @@ ul {
 	display: inline;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	border-radius: 10px;
-	border: solid #00FF00 5px;
+	border: #00FF00 5px;
 	width: 700px;
 	height: 50px;
 	float: absolute;
@@ -176,7 +176,7 @@ function signinCallback(authResult) {
     //   "immediate_failed" - Could not automatically log in the user
     console.log('Sign-in state: ' + authResult['error']);
   }
-}
+};
 
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
@@ -229,7 +229,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("test");
+     document.getElementById("ac").innerHTML = ("test1");
     
 }; 
        };
