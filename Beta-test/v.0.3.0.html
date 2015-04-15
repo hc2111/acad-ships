@@ -50,7 +50,7 @@ img.resize{
 	font-weight: bold; 
 	font-size: 3em;
 }  
-#button {
+#buttonShip {
     float: left;
 	font-family: Garamond;
 	color: black;
@@ -62,7 +62,7 @@ img.resize{
 	border-radius: 10px;
 	background: lightgray;
     }
-#button:hover {
+#buttonShip:hover {
     float: left;
 	font-family: Garamond;
 	color: black;
@@ -107,7 +107,7 @@ img.resize{
 }    
 #memory {
 	text-align: right;
- 	font-size: 1em;
+ 	font-size: 20px;
  	height: 20px;
 	width: 525px;
 	float: right;
@@ -151,7 +151,7 @@ img.resize{
 	  </span>
 	</span>
 	
-	<button id = "button"> Click to Run </button>  
+	<button id = "buttonShip"> Click to Run </button>  
   	<div id = "ship" > </div>
   
   	<div id = "memory" class = "line">
@@ -159,7 +159,7 @@ img.resize{
   	<ul></ul>
   	</div>
   	
-	<h4> What's new </h4>
+	<h4> What's new: </h4>
 	<ul> 
 		<li> Base code updated </li>
 		<li> Logo added</li>
@@ -216,7 +216,7 @@ var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	clickCount++;
-	document.getElementById("button").innerHTML = ("You've created " + clickCount + " ships!");
+	document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
@@ -286,7 +286,7 @@ document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111
 	}
 };
 
-document.getElementById("button").addEventListener("click", displayShip);
+document.getElementById("buttonShip").addEventListener("click", displayShip);
 document.getElementById("themeB").addEventListener("click", bgTheme);
 
 </script>
