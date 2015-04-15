@@ -31,7 +31,7 @@ h4 {
 	font-family: Garamond;
 	text-align: left; 
 	font-size: 1em;
-	margin-top: 100px;
+	margin-top: 25px;
 }
 ul {
 	font-family: Courier;
@@ -108,7 +108,7 @@ ul {
  	height: 20px;
 	width: 525px;
 	float: right;
-	display: inline;
+	display: inline-block;
 	list-style: none;
 	font-family: Garamond;
 }
@@ -130,13 +130,13 @@ ul {
 </head>
 <body>
 
-	<div id= "container">
-		 <div id = "logo" > <img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"> </div>
-		 <div id = "title"> Academy Shipping Generator V.0.5.0 </div>
-	</div>
-	
 	<div id = "ac" class = "line"> </div>
 
+	<div id= "container">
+		 <div id = "logo" > <img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"> </div>
+		 <div id = "title"> Academy Shipping Generator V.0.3.5 </div>
+	</div>
+	
 	<span id="signinButton">
 	  <span
 	    class="g-signin"
@@ -148,7 +148,7 @@ ul {
 	  </span>
 	</span>
 	
-	<button id = "button"> Click to run </button>  
+	<button id = "button"> Click to Run </button>  
   	<div id = "ship" > </div>
   
   	<div id = "memory" class = "line">
@@ -236,7 +236,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("");
+     document.getElementById("ac").innerHTML = ("test");
     
 }; 
        };
