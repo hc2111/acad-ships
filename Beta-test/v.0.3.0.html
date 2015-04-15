@@ -28,8 +28,8 @@ body {background-color: #C6E2FF;}
 h4 {
 	font-family: Garamond;
 	text-align: left; 
-	font-size: 1em;
-	margin-top: 50px;
+	font-size: 25px;
+	margin-top: 0px;
 }
 ul {
 	font-family: Courier;
@@ -39,6 +39,10 @@ ul {
 #logo {
 }
 #container {width:100%;}
+img.resize{
+  width:120px;
+  height:120px;
+}
 #title {
 	position: relative;
 	text-align: center;
@@ -95,12 +99,12 @@ ul {
     
 #ac {
 	border: none;
-    	position:absolute;
-    	right: 150px;
-    	text-align: center; 
+    position:absolute;
+    right: 150px;
+    text-align: center; 
 	font-family: Garamond;
 	font-size: 30px;	
-}   
+}    
 #memory {
 	text-align: right;
  	font-size: 1em;
@@ -132,7 +136,7 @@ ul {
 	<div id = "ac" class = "line"> </div>
 
 	<div id= "container">
-		 <div id = "logo" > <img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"> </div>
+         <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
 		 <div id = "title"> Academy Shipping Generator V.0.3.5 </div>
 	</div>
 	
@@ -235,7 +239,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("test2");
+     document.getElementById("ac").innerHTML = ("");
     
 }; 
        };
@@ -259,6 +263,7 @@ document.getElementById("ship").style.border = "solid #FFFFFF 5px";
 document.getElementById("themeB").style.border = "solid #FFFFFF 5px";
 	document.getElementById("themeB").style.color = "#FFFFFF";
 	document.getElementById("themeB").style.background = "#000000";
+document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logov2_square-white.jpg";
 	theme = 1;
 	}
 	
@@ -276,6 +281,7 @@ document.getElementById("ship").style.border = "solid #000000 5px";
 document.getElementById("themeB").style.border = "solid #000000 5px";
 	document.getElementById("themeB").style.color = "#000000";
 	document.getElementById("themeB").style.background = "lightgray";
+document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
 	theme = 0;
 	}
 };
