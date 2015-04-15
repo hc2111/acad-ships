@@ -218,7 +218,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.getElementById("ac").innerHTML = ("");
+     document.getElementById("ac").innerHTML = ("test");
     
 }; 
        };
@@ -254,10 +254,10 @@ document.getElementById("ship").style.border = "solid #000000 5px";
     var hoverV='button:hover{background-color: darkgray;}'; //This lets the hover return to its original properties
 	style=document.createElement('style');
 	if (style.styleSheet){
-    	style.styleSheet.cssText=css;
+    	style.styleSheet.cssText=hoverV;
 	}
 	else {
-    		style.appendChild(document.createTextNode(css));
+    		style.appendChild(document.createTextNode(hoverV));
 		document.getElementsByTagName('head')[0].appendChild(style);
 	} //end hover restore
 document.getElementById("themeB").style.border = "solid #000000 5px";
