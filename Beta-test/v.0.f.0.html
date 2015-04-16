@@ -212,14 +212,14 @@ var acadBoys = [ ' Arij Akram ', ' Joey Allen ', ' Avery Anstett ',  ' Zach Barr
 ' Collin Pendergrass ', ' Patrick Pynadath ', ' Caspian Raksinh ', ' Eddie Rojas ',
 ' Daniel Sanji ', ' Dennis Santos ', ' Matthew Schultz ', ' Nic Simon ', ' Alex Sommer ',
 ' Mitchell Sommer ', ' Terrence Tom ', ' Joshua Villacastin ', ' Alden Williams ', 
-' Griffin Wright ', ' Tyler Yang ', ' Tom Zaborowski ', ' Jared Zavala '];
+' Griffin Wright ', ' Tyler Yang ', ' Tom Zaborowski ', ' Jared Zavala ', ' Areeb Shethwala '];
 
 var acadGirls = ['Maryam Ahmed', 'Katrina Ahmen', 'Priya Baxi' ,  'Shayna Chacko',
 'Rose Chiodo', 'Emma Cork', 'Olivia Cortes', 'Natalie Czernicki', 'Jessica Davalos',
 'Kayla Ferrandino', 'Georgia Fischer', 'Audrey Hartnett', 'Leela Herena', 'Mace Heskin',
 'Donna Huynh', 'Shruti Italia', 'Azka Khan',  'Amritha Kumar', 'Fabiola Lopez',  
 'Imaan Maniya', 'Jessica Nicholson', 'Ritu Parikh', 'Rushi Patel', 'Shivani Patel', 
-'Casey Pierce', 'Hannah Raj', 'Gabby Seberger', 'Priya Shah', 'Areeb Shethwala', 
+'Casey Pierce', 'Hannah Raj', 'Gabby Seberger', 'Priya Shah',  
 'Drashti Sikligar', 'Snehal Somalraju', 'Dhara Sonani', 'Dakota Stowitts', 
 'Madeleine Worden', 'Sylwia Zieba'];
 
@@ -240,8 +240,8 @@ var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	clickCount++;
 	document.getElementById("button").innerHTML = ("You've created " + clickCount + " ships!");
-	var randBoy = acadBoys[Math.floor(Math.random() * 47)];
-        var randGirl = acadGirls[Math.floor(Math.random() * 35)];
+	var randBoy = acadBoys[Math.floor(Math.random() * 48)];
+        var randGirl = acadGirls[Math.floor(Math.random() * 34)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
         	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
         	 makelist();
