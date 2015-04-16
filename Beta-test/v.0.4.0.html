@@ -23,34 +23,26 @@
 <script type="text/javascript" src="script.js">
 </script>
 <title> Academy Shipping Generator </title>
- <style id="stylesheet.css">
- 
-body {
-	background-color: #C6E2FF;
-	
-}
-
+ <style id="jsbin-css">
+body {background-color: #C6E2FF;}
 h4 {
 	font-family: Garamond;
 	text-align: left; 
-	font-size: 1em;
-	margin-top: 50px;
+	font-size: 25px;
+	margin-top: 0px;
 }
-
 ul {
 	font-family: Courier;
 	text-align: left; 
 	font-size: 1em; 
 }
-
 #logo {
 }
-
-#container {
-	width:100%;
-	
+#container {width:100%;}
+img.resize{
+  width:120px;
+  height:120px;
 }
-
 #title {
 	position: relative;
 	text-align: center;
@@ -58,8 +50,7 @@ ul {
 	font-weight: bold; 
 	font-size: 3em;
 }  
-
-#button {
+#buttonShip {
     float: left;
 	font-family: Garamond;
 	color: black;
@@ -71,8 +62,7 @@ ul {
 	border-radius: 10px;
 	background: lightgray;
     }
-    
-#button:hover {
+#buttonShip:hover {
     float: left;
 	font-family: Garamond;
 	color: black;
@@ -84,7 +74,6 @@ ul {
 	border-radius: 10px;
 	background: darkgray;
     }
-    
 #ship {
 	float: right;
 	border: solid black 5px;
@@ -96,14 +85,12 @@ ul {
 	font-family: Garamond;
 	font-size: 25px;
 }
-
 #signinButton {
 	position: absolute;
 	top: 10px; 
 	right: 10px;
 	border: none;
 }
-
 #gplus1 {
 	position: relative;
 	top: 10px; 
@@ -111,18 +98,16 @@ ul {
 }
     
 #ac {
-	display: inline-block;
 	border: none;
-	text-align: center; 
+    position:absolute;
+    right: 150px;
+    text-align: center; 
 	font-family: Garamond;
-	font-size: 30px;
-	float: right;
-	margin.right: auto;
-}   
-
+	font-size: 30px;	
+}    
 #memory {
 	text-align: right;
- 	font-size: 25px;
+ 	font-size: 20px;
  	height: 20px;
 	width: 525px;
 	float: right;
@@ -130,7 +115,6 @@ ul {
 	list-style: none;
 	font-family: Garamond;
 }
-
 #themeB {
 	font-family: Garamond;
 	color: black;
@@ -143,7 +127,6 @@ ul {
 	border-radius: 10px;
 	background: lightgray;
 }
-
 </style>
 </head>
 <body>
@@ -151,8 +134,8 @@ ul {
 	<div id = "ac" class = "line"> </div>
 
 	<div id= "container">
-		 <div id = "logo" > <img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg"> </div>
-		 <div id = "title"> Academy Shipping Generator V.0.4.1 </div>
+         <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
+		 <div id = "title"> Academy Shipping Generator V.0.4.3 </div>
 	</div>
 	
 	<span id="signinButton">
@@ -166,19 +149,19 @@ ul {
 	  </span>
 	</span>
 	
-	<button id = "button"> Click to Run </button>  
-	
+	<button id = "buttonShip"> Click to Run </button>  
   	<div id = "ship" > </div>
   
   	<div id = "memory" class = "line">
-  		<h4>Ships log:</h4>
+  		<h4>Ships Log: </h4>
   	<ul></ul>
   	</div>
   	
-	<h4> What's new </h4>
+	<h4> What's new: </h4>
 	<ul> 
-		<li> Inverted colors! </li>
 		<li> Base code updated </li>
+		<li> Alternate Logo added</li>
+		<li> Inverted Colors!</li>
 		<li> BETA testing currently underway </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
 	</ul>
@@ -203,7 +186,6 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 };
-
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -232,7 +214,7 @@ var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	clickCount++;
-	document.getElementById("button").innerHTML = ( clickCount + " ships have been created.");
+	document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
@@ -259,7 +241,6 @@ var displayShip = function() {
     
 }; 
        };
-       
 function makelist(){
 	var listData = allShips;
 	var numberOfListItems = listData.length;
@@ -267,19 +248,23 @@ function makelist(){
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
-
 var theme = 0;
 function bgTheme() {
     if (theme === 0){
 	document.body.style.backgroundColor = "#000000";
 	document.body.style.color = "#FFFFFF";
 document.getElementById("ship").style.border = "solid #FFFFFF 5px";
-	document.getElementById("button").style.border = "solid #FFFFFF 5px";
-	document.getElementById("button").style.color = "#FFFFFF";
-	document.getElementById("button").style.background = "#000000";
+	document.getElementById("buttonShip").style.border = "solid #FFFFFF 5px";
+	document.getElementById("buttonShip").style.color = "#FFFFFF";
+	document.getElementById("buttonShip").style.background = "#000000";
 document.getElementById("themeB").style.border = "solid #FFFFFF 5px";
 	document.getElementById("themeB").style.color = "#FFFFFF";
 	document.getElementById("themeB").style.background = "#000000";
+document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logov2_square-white.jpg";
+document.getElementById("buttonShip").onmouseover = function() {
+    this.style.backgroundColor = "black";}
+document.getElementById("buttonShip").onmouseout = function() {
+    this.style.backgroundColor = "black";}
 	theme = 1;
 	}
 	
@@ -287,20 +272,21 @@ document.getElementById("themeB").style.border = "solid #FFFFFF 5px";
 	document.body.style.backgroundColor = "#C6E2FF";
 	document.body.style.color = "#000000";
 document.getElementById("ship").style.border = "solid #000000 5px";
-	document.getElementById("button").style.border = "solid #000000 5px";
-	document.getElementById("button").style.color = "#000000";
-	document.getElementById("button").style.background = "lightgray";
-    var hoverV='button:hover{background-color: darkgray;}'; //This lets the hover return to its original properties
-	style=document.createElement('style');
-    	style.appendChild(document.createTextNode(hoverV));
-	document.getElementsByTagName('head')[0].appendChild(style);  //end hover restore
+	document.getElementById("buttonShip").style.border = "solid #000000 5px";
+	document.getElementById("buttonShip").style.color = "#000000";
+	document.getElementById("buttonShip").style.background = "lightgray";
 document.getElementById("themeB").style.border = "solid #000000 5px";
 	document.getElementById("themeB").style.color = "#000000";
 	document.getElementById("themeB").style.background = "lightgray";
+document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
+document.getElementById("buttonShip").onmouseover = function() {
+    this.style.backgroundColor = "darkgray";}
+document.getElementById("buttonShip").onmouseout = function() {
+    this.style.backgroundColor = "lightgray";}
 	theme = 0;
 	}
 };
-document.getElementById("button").addEventListener("click", displayShip);
+document.getElementById("buttonShip").addEventListener("click", displayShip);
 document.getElementById("themeB").addEventListener("click", bgTheme);
 </script>
 </body>
