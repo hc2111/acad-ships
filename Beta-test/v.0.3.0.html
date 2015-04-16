@@ -130,7 +130,7 @@ img.resize{
 #newac {
 	border: none;
         position:absolute;
-        right: 150px;
+        float: left;
         text-align: center; 
 	font-family: Garamond;
 	font-size: 30px;	
@@ -178,6 +178,7 @@ img.resize{
   	<div id = "gplus1" class="g-plusone"></div>
   	
   	<button id = "themeB"> Change Theme </button>
+  	
   	<div id = "newac" class = "line" </div>
 
 <script id="jsbin-javascript">
@@ -303,9 +304,10 @@ document.getElementById("buttonShip").onmouseout = function() {
 	theme = 0;
 	}
 };
+
 function newAch(shipId){
 	if (shipId===1){
-	var elementLi = document.createElement("li");
+	var elementLi = document.createElement("div");
                 elementLi.innerHTML = "TEST";
                 document.getElementById("newac").appendChild(elementLi);
 	}	
