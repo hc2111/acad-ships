@@ -127,6 +127,14 @@ img.resize{
 	border-radius: 10px;
 	background: lightgray;
 }
+#newac {
+	border: none;
+        position:absolute;
+        right: 150px;
+        text-align: center; 
+	font-family: Garamond;
+	font-size: 30px;	
+}   
 
 
 </style>
@@ -170,6 +178,7 @@ img.resize{
   	<div id = "gplus1" class="g-plusone"></div>
   	
   	<button id = "themeB"> Change Theme </button>
+  	<div>div id = "newac" class = "line" </div>
 
 <script id="jsbin-javascript">
 // google+ button 
@@ -240,9 +249,10 @@ var displayShip = function() {
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
      document.getElementById("ac").innerHTML = ("");
-    
+    newAc(1);
 }; 
        };
+       
 function makelist(){
 	var listData = allShips;
 	var numberOfListItems = listData.length;
@@ -292,6 +302,13 @@ document.getElementById("buttonShip").onmouseout = function() {
 
 	theme = 0;
 	}
+};
+function newAc(shipId){
+	if (shipId===1){
+	var elementLi = document.createElement("li");
+                elementLi.innerHTML = "TEST";
+                document.getElementsByTagName("body").appendChild(elementLi);
+	}	
 };
 
 document.getElementById("buttonShip").addEventListener("click", displayShip);
