@@ -23,22 +23,34 @@
 <script type="text/javascript" src="script.js">
 </script>
 <title> Academy Shipping Generator </title>
- <style id="jsbin-css">
-body {background-color: #C6E2FF;}
+ <style id="stylesheet.css">
+ 
+body {
+	background-color: #C6E2FF;
+	
+}
+
 h4 {
 	font-family: Garamond;
 	text-align: left; 
 	font-size: 1em;
 	margin-top: 50px;
 }
+
 ul {
 	font-family: Courier;
 	text-align: left; 
 	font-size: 1em; 
 }
+
 #logo {
 }
-#container {width:100%;}
+
+#container {
+	width:100%;
+	
+}
+
 #title {
 	position: relative;
 	text-align: center;
@@ -46,6 +58,7 @@ ul {
 	font-weight: bold; 
 	font-size: 3em;
 }  
+
 #button {
     float: left;
 	font-family: Garamond;
@@ -58,6 +71,7 @@ ul {
 	border-radius: 10px;
 	background: lightgray;
     }
+    
 #button:hover {
     float: left;
 	font-family: Garamond;
@@ -70,6 +84,7 @@ ul {
 	border-radius: 10px;
 	background: darkgray;
     }
+    
 #ship {
 	float: right;
 	border: solid black 5px;
@@ -81,12 +96,14 @@ ul {
 	font-family: Garamond;
 	font-size: 25px;
 }
+
 #signinButton {
 	position: absolute;
 	top: 10px; 
 	right: 10px;
 	border: none;
 }
+
 #gplus1 {
 	position: relative;
 	top: 10px; 
@@ -102,6 +119,7 @@ ul {
 	float: right;
 	margin.right: auto;
 }   
+
 #memory {
 	text-align: right;
  	font-size: 25px;
@@ -112,6 +130,7 @@ ul {
 	list-style: none;
 	font-family: Garamond;
 }
+
 #themeB {
 	font-family: Garamond;
 	color: black;
@@ -124,6 +143,7 @@ ul {
 	border-radius: 10px;
 	background: lightgray;
 }
+
 </style>
 </head>
 <body>
@@ -147,6 +167,7 @@ ul {
 	</span>
 	
 	<button id = "button"> Click to Run </button>  
+	
   	<div id = "ship" > </div>
   
   	<div id = "memory" class = "line">
@@ -182,6 +203,7 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 };
+
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
@@ -237,6 +259,7 @@ var displayShip = function() {
     
 }; 
        };
+       
 function makelist(){
 	var listData = allShips;
 	var numberOfListItems = listData.length;
@@ -244,6 +267,7 @@ function makelist(){
                 elementLi.innerHTML = listData[(numberOfListItems-1)];
                 document.getElementById("memory").appendChild(elementLi);
 };
+
 var theme = 0;
 function bgTheme() {
     if (theme === 0){
