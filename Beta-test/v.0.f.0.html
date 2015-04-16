@@ -117,6 +117,19 @@ font-size: 1em;
 	list-style: none;
 	font-family: Garamond;
 }
+#buttonShip:hover {
+    float: left;
+	font-family: Garamond;
+	color: black;
+	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
+	font-size: 300%;
+	width: 50%
+	height: 60px;
+	border: solid black 5px;
+	border-radius: 10px;
+	background: darkgray;
+    }
+
 .twitter-share-button {
 	position: relative;
 	/*margin-top: 500px;
@@ -279,16 +292,16 @@ document.getElementById("buttonShip").onmouseout = function() {
 	document.body.style.backgroundColor = "#C6E2FF";
 	document.body.style.color = "#000000";
 document.getElementById("ship").style.border = "solid #000000 5px";
-	document.getElementById("button").style.border = "solid #000000 5px";
-	document.getElementById("button").style.color = "#000000";
-	document.getElementById("button").style.background = "lightgray";
+	document.getElementById("buttonShip").style.border = "solid #000000 5px";
+	document.getElementById("buttonShip").style.color = "#000000";
+	document.getElementById("buttonShip").style.background = "lightgray";
 document.getElementById("themeB").style.border = "solid #000000 5px";
 	document.getElementById("themeB").style.color = "#000000";
 	document.getElementById("themeB").style.background = "lightgray";
 document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
-document.getElementById("button").onmouseover = function() {
+document.getElementById("buttoShip").onmouseover = function() {
     this.style.backgroundColor = "darkgray";}
-document.getElementById("button").onmouseout = function() {
+document.getElementById("buttonShip").onmouseout = function() {
     this.style.backgroundColor = "lightgray";}
 	theme = 0;
 	}
