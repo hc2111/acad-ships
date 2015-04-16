@@ -95,12 +95,12 @@ img.resize{
 	position: relative;
 	top: 10px; 
 	right: 100px;
-	float: right;
 }
     
 #ac {
-	border: solid white 5px;
+	border: none;
     position:absolute;
+    right: 150px;
     text-align: center; 
 	font-family: Garamond;
 	font-size: 30px;	
@@ -135,7 +135,7 @@ img.resize{
 
 	<div id= "container">
          <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
-		 <div id = "title"> Academy Shipping Generator V.0.4.5 </div>
+		 <div id = "title"> Academy Shipping Generator V.0.3.5 </div>
 	</div>
 	
 	<span id="signinButton">
@@ -153,23 +153,21 @@ img.resize{
   	<div id = "ship" > </div>
   
   	<div id = "memory" class = "line">
-  		<h4>Ships Log: </h4>
+  		<h4>Previously created ships:</h4>
   	<ul></ul>
   	</div>
   	
 	<h4> What's new: </h4>
 	<ul> 
 		<li> Base code updated </li>
-		<li> Alternate Logo added</li>
-		<li> Inverted Colors!</li>
-		<li> Counter Added</li>
+		<li> Logo added</li>
 		<li> BETA testing currently underway </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
 	</ul>
 		 
   	<div id = "gplus1" class="g-plusone"></div>
   	
-  	<button id = "themeB"> Invert Colors </button>
+  	<button id = "themeB"> Change Theme </button>
 
 <script id="jsbin-javascript">
 // google+ button 
@@ -215,7 +213,7 @@ var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() {
 	clickCount++;
-	document.getElementById("buttonShip").innerHTML = (clickCount + " ships generated");
+	document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
 	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
         var randGirl = acadGirls[Math.floor(Math.random() * 20)];
         	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
@@ -238,7 +236,7 @@ var displayShip = function() {
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
-     document.createElement("div").innerHTML = ("Achievement Unlocked: First ship");
+     document.getElementById("ac").innerHTML = ("");
     
 }; 
        };
