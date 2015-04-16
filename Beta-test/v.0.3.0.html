@@ -250,10 +250,11 @@ var displayShip = function() {
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
      document.getElementById("ac").innerHTML = ("");
+    newAch(0);
     newAch(1);
 }; 
        };
-       
+      
 function makelist(){
 	var listData = allShips;
 	var numberOfListItems = listData.length;
@@ -305,12 +306,21 @@ document.getElementById("buttonShip").onmouseout = function() {
 	}
 };
 
+var ac0 = 0;
+var ac1 = 0;
 function newAch(shipId){
-	if (shipId===1){
+	if (shipId===0 && acVar===0){
 	var elementLi = document.createElement("div");
                 elementLi.innerHTML = "TEST";
                 document.getElementById("newac").appendChild(elementLi);
-	}	
+                ac0 = 1;
+	}
+	else if(shipId === 1 && ac1 === 0){
+		var elementLi = document.createElement("div");
+                elementLi.innerHTML = "TEST1";
+                document.getElementById("newac").appendChild(elementLi);
+                ac1 = 1;	
+	}
 };
 
 document.getElementById("buttonShip").addEventListener("click", displayShip);
