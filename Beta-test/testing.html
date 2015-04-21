@@ -1,0 +1,19 @@
+
+	<%
+	' Variables
+	Dim fso, f, filespec
+
+	' FileSystemObject
+
+	Set fso = CreateObject("Scripting.FileSystemObject")
+
+	' Find the physical location of the text file
+	filespec = Server.Mappath("/tutorials/asp/textfile.txt")
+
+	' Open the text file
+	Set f = fso.OpenTextFile(filespec,2)
+
+	'Close the text file
+	f.Close
+
+	%>
