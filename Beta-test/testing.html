@@ -49,7 +49,7 @@
         var feed = $j('#feed').val();
         if ((name !== "") && (email !== "") && ((feed !== "") && (validateEmail(email)))) {
             $j.ajax({
-                url: "https://docs.google.com/yourFormURL/formResponse",
+                url: "https://docs.google.com/forms/d/1Iu0olAwdpaT7e2IIXAvIPttuBI3FjBdASHiPxUiKm2U",
                 data: {"entry.1" : name, "entry.3" : email, "entry.4": feed},
                 type: "POST",
                 dataType: "xml",
