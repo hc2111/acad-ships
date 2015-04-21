@@ -8,7 +8,7 @@
 	Set fso = CreateObject("Scripting.FileSystemObject")
 
 	' Find the physical location of the text file
-	filespec = Server.Mappath("/tutorials/asp/textfile.txt")
+	filespec = Server.Mappath("Logs.txt")
 
 	' Open the text file
 	Set f = fso.OpenTextFile(filespec,2)
