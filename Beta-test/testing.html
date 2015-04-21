@@ -1,78 +1,81 @@
-<html>
-
-<head>
-<title>Reading from text files</title>
+   <head>
+    <title>Completed sample for turning a Google Spreadsheet into an HTML Table</title>
+    <!-- Add a div where the table will go -->
+ 
+    <script type='text/javascript'>
+        //Write a function that allows us to add commas to raw numbers in spreadsheet for display.  2413 becomes 2,413.
+        function addCommas(nStr)
+        {
+        	nStr += '';
+        	x = nStr.split('.');
+        	x1 = x[0];
+        	x2 = x.length > 1 ? '.' + x[1] : '';
+        	var rgx = /(\d+)(\d{3})/;
+        	while (rgx.test(x1)) {
+        		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+        	}
+        	return x1 + x2;
+        }
+ 
+        //this will be executed after we "fetch" the contents of a spreadsheet. The json parameter will hold our spreadsheet's data
+        function displayContent(json) {
+            //start an html table and write out our headers.  Using <td> tags so it isn't bold and centered, which is the <th> default.
+            var pre_html = '<table id = "salaries"><tr><td>City</td><td>Name</td>\
+    <td>2009 taxable<br />compensation*</td>\
+    <td>Population</td><td>Median income</td></thead><tbody>';
+            //Create an empty string to hold the HTML. We will put table data here.
+            var actual_html='';
+            //After we grab the table, close the HTML table.
+            var post_html = '</tbody></table>'
+            //figure out how many rows our spreadsheet has
+            var len = json.feed.entry.length
+ 
+            //loop through the spreadsheet, gathering data
+            for (var i=0; i<len; i++) {
+                //for each row, add the following to actual HTML, grabbing it as a list, and then joining the list together as one long string.
+                //Uses HTML for table cells, and then grabs attributes from the spreadsheet, using appropriate syntax. Enter your table header in the Google spreadsheet between            
+                //the gsx$ and .$t.
+                actual_html += [
+                    '<tr><td>', 
+                    '<a target="_blank" title="Mapping L.A." href="', 
+                    json.feed.entry[i].gsx$mappinglink.$t, 
+                    '">', 
+                    json.feed.entry[i].gsx$city.$t, 
+                    '</a>', 
+                    '</td><td>', 
+                    '<a target="_blank" title="City website" href="',  
+                    json.feed.entry[i].gsx$personwebsite.$t, 
+                    '">', 
+                    json.feed.entry[i].gsx$name.$t, 
+                    '</a>', 
+                    '<br /><span>', 
+                    json.feed.entry[i].gsx$title.$t, 
+                    '</span>', 
+                    '<a target="_blank"  href="', 
+                    json.feed.entry[i].gsx$email.$t, 
+                    '"></a>', 
+                    '</td><td>', 
+                    addCommas(json.feed.entry[i].gsx$compensation.$t), 
+                    '</td>', 
+                    '<td>', 
+                    addCommas(json.feed.entry[i].gsx$population.$t), 
+                    '</td>',
+                       '<td>', 
+                        addCommas(json.feed.entry[i].gsx$medianincome.$t), 
+                        '</td>','</tr>'
+                ].join('');  
+            }
+            //put all three of our HTML strings into our div we made at the top of the page
+            document.getElementById('salary_table_container').innerHTML = pre_html + actual_html + post_html
+ 
+        }   
+    </script>
 </head>
 <body>
-<div id="form" class="contact-us-form">
-    <div class="title">
-        <strong>Have any questions?</strong>
-    </div>
-    <div class="subtitle">
-        <strong>Drop us a line</strong>
-    </div>
-    <form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">
-        <fieldset>
-            <label for="name">What's your name? *</label>
-            <input id="name" type="text" name="name">
-        </fieldset>
-        <fieldset>
-            <label for="email">What's your email? *</label>
-            <input id="email" type="text" name="email">
-        </fieldset>
-        <fieldset>
-            <label for="feed">Questions or Feedback?*</label>
-            <textarea id="feed" name="feed"></textarea>
-        </fieldset>
-        <div style="text-align: right; padding-bottom: 15px;">* Required</div>
-        <div style="width: 100%; display: block; float: right;">
-            <button id="send" type="submit">
-                Contact Us
-            </button>
-        </div>
-        <div style="width: 100%; display: block; float: right; padding-top: 15px;">
-            <div class="requestSubmited" style="display:none; text-align: center;">Your request has been sent!</div>
-        </div>
-    </form>
-</div>
-
-</body>
-
-<script type="text/javascript">
-    function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    }"
-    function postContactToGoogle(){
-        var name = $j('#name').val();
-        var email = $j('#email').val();
-        var feed = $j('#feed').val();
-        if ((name !== "") && (email !== "") && ((feed !== "") && (validateEmail(email)))) {
-            $j.ajax({
-                url: "https://docs.google.com/forms/d/1Iu0olAwdpaT7e2IIXAvIPttuBI3FjBdASHiPxUiKm2U",
-                data: {"entry.1" : name, "entry.3" : email, "entry.4": feed},
-                type: "POST",
-                dataType: "xml",
-                statusCode: {
-                    0: function (){
+<div id="salary_table_container"></div>
  
-                        $j('#name').val("");
-                        $j('#email').val("");
-                        $j('#feed').val("");
-                        //Success message
-                    },
-                    200: function (){
-                        $j('#name').val("");
-                        $j('#email').val("");
-                        $j('#feed').val("");
-                        //Success Message
-                    }
-                }
-            });
-        }
-        else {
-            //Error message
-        }
-    }
-</script>
+<!-- Grab the data from our google spreadsheet, using the callback to call the function we just created -->
+<script src="http://spreadsheets.google.com/feeds/list/0AlO_LanGCFltdGlsa2hSNHhOdHlCYmpFeXdlY0ZNS2c/od6/public/values?alt=json-in-script&amp;callback=displayContent" type="text/javascript"></script>
+ 
+</body>
 </html>
