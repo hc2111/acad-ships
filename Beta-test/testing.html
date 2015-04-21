@@ -7,7 +7,11 @@
 
 <body>
 
-  <button id="form-submit" type="submit">SUBMIT</button>
+<form id="input-form" action="" method="POST" target="no-target">
+    <button id="form-submit" type="submit">SUBMIT</button>
+</form>
+
+<iframe src="#" id="no-target" name="no-target" style="visibility:hidden"></iframe>
 
 <script>
     $('#input-form').one('submit',function(){
