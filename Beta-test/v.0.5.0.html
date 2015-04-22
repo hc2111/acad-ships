@@ -151,6 +151,21 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 }
+
+// Like button submit code
+$('#input-form').one('submit',function(){
+        var inputq1 = "hi";
+        var inputq2 = "higrds";
+        var q1ID = "entry.534329926";
+        var q2ID = "entry.613275184";
+        var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
+        var submitRef = '&submit=Submit';
+        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
+        console.log(submitURL);
+        $(this)[0].action=submitURL;
+        $('#input-name').addClass('active').val('Thank You!');
+    });
+    
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
