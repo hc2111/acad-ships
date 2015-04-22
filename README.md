@@ -1,18 +1,35 @@
-#Academy Shipping Generator v0.1.0
+#Academy Shipping Generator v0.3.5
 
-##Current Capabilities:
-- [x] Entire Academy Name Database Implemented
-- [x] Base Code Completed
-- [x] Basic Functions Initiated
-- [x] BETA Testing Underway
+##New Features:
+- [x] Click Counter
+- [x] Themes
+- [x] Ship History Added
+- [x] Bugs Fixed
 
-##Coming in v.0.2.0:
-  - [ ] Ship Name Memory
-  - [ ] Changing Background Colours
-  - [ ] Achievement Banners
-  - [ ] Click Counter
+##Coming Soon:
+- [ ] Public Access to ALPHA and BETA builds
+- [ ] Like and Unlike Buttons
+- [ ] MFK Mode
+- [ ] Continued Bug Fixing
+- [ ] Return of v.0.1.0
 
-Contact us at harrism436@gmail.com or hccoding@gmail.com with any questions, comments, requests, or concerns 
+Contact us at academyships@gmail.com with any questions, comments, requests, or concerns 
 
 ##Previous Versions:
 
+#### **Academy Shipping Generator v.0.1.0**
+  Release Date: April 6th 2015
+  
+  New Features:
+  - Our First ever Release
+  - Base Code Completed
+  - Alpha Testing Begun
+  - Sophomore Academy Database Compiled
+
+#### **Academy Shipping Generator v.0.2.0- Unofficial Release**
+  Release Date: April 16th 2015
+  
+  New Features:
+  - Achievements Added
+  - Ship History Added
+  - Bugs fixed
