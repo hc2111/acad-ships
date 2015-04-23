@@ -262,13 +262,24 @@ var displayShip = function()
     //Click Counter
     clickCount++;
     document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
-    document.getElementById("input-form").action='';
+    
+    //document.getElementById("input-form").action='';
     
     randBoy = acadBoys[Math.floor(Math.random() * 61)];
     randGirl = acadGirls[Math.floor(Math.random() * 20)];
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
     allShips.push("The random ship is " + randBoy + " and " + randGirl);  
     makelist();
+    
+    var inputq1 = randBoy;
+    var inputq2 = randGirl;
+    var q1ID = "entry.534329926";
+    var q2ID = "entry.613275184";
+    var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
+    var submitRef = '&submit=Submit';
+    var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
+    console.log(submitURL);
+    document.getElementById("input-form").action=submitURL;
     
     // Achievements
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
@@ -299,7 +310,7 @@ function makelist(){
     document.getElementById("memory").appendChild(elementLi);
 };
     
-$('#input-form').one('submit',function(){
+/*$('#input-form').one('submit',function(){
         var inputq1 = randBoy;
         var inputq2 = randGirl;
         var q1ID = "entry.534329926";
@@ -309,8 +320,10 @@ $('#input-form').one('submit',function(){
         var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
         console.log(submitURL);
         document.getElementById("input-form").action=submitURL;
+        //document.getElementById('input-form').reset();
+        //$("#yourFormId").trigger('reset');
         //$(this)[0].action=submitURL;
-});   
+});   */
 
 var theme = 0;
 var theme1 = 0;
