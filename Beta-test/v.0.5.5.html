@@ -210,21 +210,7 @@ img.resize{
         <button id="form-submit" type="submit">LIKE</button>
     </form>
     <iframe src="#" id="no-target" name="no-target" style="visibility:hidden"></iframe>
-    <script>   
-        $('#input-form').one('submit',function(){
-        var inputq1 = randBoy;
-        var inputq2 = randGirl;
-        var q1ID = "entry.534329926";
-        var q2ID = "entry.613275184";
-        var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
-        var submitRef = '&submit=Submit';
-        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
-        console.log(submitURL);
-        $(this)[0].action=submitURL;
-        $('#input-name').addClass('active').val('Thank You!');
-    });   
-    </script>
-    
+   
     
 <script id="jsbin-javascript">
 // google+ button 
@@ -267,8 +253,8 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
 'Hannah Melo', 'Brooke Bednarke '];
      
-var randBoy = 0;
-var randGirl = 0;
+var randBoy = 0
+var randGirl = 0
 var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
 var displayShip = function() 
@@ -276,13 +262,13 @@ var displayShip = function()
     //Click Counter
     clickCount++;
     document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
+    document.getElementById("input-form").action='';
     
-    
-    var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-    var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-     allShips.push("The random ship is " + randBoy + " and " + randGirl);  
-     makelist();
+    randBoy = acadBoys[Math.floor(Math.random() * 61)];
+    randGirl = acadGirls[Math.floor(Math.random() * 20)];
+    document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
+    allShips.push("The random ship is " + randBoy + " and " + randGirl);  
+    makelist();
     
     // Achievements
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
@@ -290,7 +276,7 @@ var displayShip = function()
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
     document.getElementById("ac").innerHTML = ("Wilshwarya");
     } else if (randBoy === ' Hammad Imam ' && randGirl === 'Nadia Nikolova'){
-     document.getElementById("ac").innerHTML = ("That ship went over the Niagara Falls");
+     document.getElementById("ac").innerHTML = ("That ship went over Niagara Falls");
     } else if (randBoy === ' Xander Apponi ' && randGirl === 'Marissa Gustafson'){
      document.getElementById("ac").innerHTML = ("Aww.... Young love.");
     } else if (randBoy === ' Jayam Shah ' && randGirl === 'Ami Patel'){
@@ -313,7 +299,18 @@ function makelist(){
     document.getElementById("memory").appendChild(elementLi);
 };
     
-
+$('#input-form').one('submit',function(){
+        var inputq1 = randBoy;
+        var inputq2 = randGirl;
+        var q1ID = "entry.534329926";
+        var q2ID = "entry.613275184";
+        var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
+        var submitRef = '&submit=Submit';
+        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
+        console.log(submitURL);
+        document.getElementById("input-form").action=submitURL;
+        //$(this)[0].action=submitURL;
+});   
 
 var theme = 0;
 var theme1 = 0;
