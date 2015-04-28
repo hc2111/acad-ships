@@ -1,14 +1,14 @@
-#Academy Shipping Generator v0.3.5
+#Academy Shipping Generator v0.5.7
 
 ##New Features:
-- [x] Click Counter
-- [x] Themes
-- [x] Ship History Added
+- [x] Like Button Added
+- [x] Themes Upgraded
+- [x] Achievement Upgrades
 - [x] Bugs Fixed
 
 ##Coming Soon:
 - [ ] Public Access to ALPHA and BETA builds
-- [ ] Like and Unlike Buttons
+- [ ] Unlike Button
 - [ ] MFK Mode
 - [ ] Continued Bug Fixing
 - [ ] Return of v.0.1.0
@@ -33,3 +33,12 @@ Contact us at academyships@gmail.com with any questions, comments, requests, or 
   - Achievements Added
   - Ship History Added
   - Bugs fixed
+
+#### **Academy Shipping Generator v.0.3.5**
+  Release Date: April 22th 2015
+  
+  New Features:
+- Click Counter
+- Themes
+- Ship History Added
+- Bugs Fixed
