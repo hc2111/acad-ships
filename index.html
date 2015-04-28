@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
 <!-- Favicon Init -->
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
 <!-- Google Plus Code Setup -->
@@ -10,24 +10,20 @@
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
-<!--Pure CSS Setup  -->	
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--[if lte IE 8]>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-<![endif]-->
-<!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-<!--<![endif]-->
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
+    
 <link type = "text/css" rel = "stylesheet" href = "stylesheet.css"/> 
-<script type="text/javascript" src="script.js">
-</script>
+<script type="text/javascript" src="script.js"></script>
+
 <title> Academy Shipping Generator </title>
- <style id="jsbin-css">
+
+<!-- Start of css-->    
+<style id="jsbin-css">
 body {background-color: #C6E2FF;}
 h4 {
 	font-family: Garamond;
-	text-align: left; 
+	text-align: left;
 	font-size: 25px;
 	margin-top: 0px;
 }
@@ -115,6 +111,31 @@ img.resize{
 	list-style: none;
 	font-family: Garamond;
 }
+#like{
+    font-family: Garamond;
+    position: absolute;
+    color: black;
+    border: solid black 3px;
+	border-radius: 15px;
+	background: lightgray;
+    right: 10px;
+    top: 250px;
+    width: 100px;
+}
+#like:hover {
+    font-family: Garamond;
+    position: absolute;
+    color: black;
+    border: solid black 3px;
+	border-radius: 15px;
+	background: darkgray;
+    right: 10px;
+    width: 100px;
+}
+#space{
+    width: 100%;
+	height: 30px;
+}
 #themeB {
 	font-family: Garamond;
 	color: black;
@@ -127,8 +148,18 @@ img.resize{
 	border-radius: 10px;
 	background: lightgray;
 }
-
-
+#themeC {
+	font-family: Garamond;
+	color: black;
+	font-size: 20px;
+	line-height: 20px;
+	display: inline-block;
+	width: auto;
+	height: 30px;
+	border: solid black 5px;
+	border-radius: 10px;
+	background: lightgray;
+}
 </style>
 </head>
 <body>
@@ -137,7 +168,7 @@ img.resize{
 
 	<div id= "container">
          <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
-		 <div id = "title"> Academy Shipping Generator V.0.3.5 </div>
+		 <div id = "title"> Academy Shipping Generator V.0.5.7 </div>
 	</div>
 	
 	<span id="signinButton">
@@ -153,9 +184,10 @@ img.resize{
 	
 	<button id = "buttonShip"> Click to Run </button>  
   	<div id = "ship" > </div>
-  
-  	<div id = "memory" class = "line">
-  		<h4>Previously created ships:</h4>
+    <div id = "space" > </div>
+  	
+    <div id = "memory" class = "line">
+    <h4>Ships log:</h4>
   	<ul></ul>
   	</div>
   	
@@ -164,13 +196,21 @@ img.resize{
 		<li> Base code updated </li>
 		<li> Logo added</li>
 		<li> BETA testing currently underway </li>
+		<li> New themes! </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
 	</ul>
 		 
   	<div id = "gplus1" class="g-plusone"></div>
   	
-  	<button id = "themeB"> Change Theme </button>
+  	<button id = "themeB"> Inverted Colors Theme </button>
+  	<button id = "themeC"> Black/Blue Color Theme </button>
 
+    <form id="input-form" action="" method="POST" target="no-target" onsubmit="disableLike();">
+        <button id="like" type="submit">LIKE</button>
+    </form>
+    <iframe src="#" id="no-target" name="no-target" style="visibility:hidden"></iframe>
+   
+    
 <script id="jsbin-javascript">
 // google+ button 
 function signinCallback(authResult) {
@@ -187,11 +227,12 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 };
-
+    
+// Shipping Code
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
 ' Amar Patel ', ' Anoop Saini ', ' Anthony Nicolini ', ' Xavier Espinoza ',
-' Asher Kam ', ' Ashish Yalavarthi ', ' Ben White ', ' Wil Blount ', 
+' Asher Odisho ', ' Ashish Yalavarthi ', ' Ben White ', ' Wil Blount ', 
 ' Brian Espinoza ', ' Chester Hall ', ' Chris Woods ',
 ' Connor Shenberg ' , ' Daniel Hayes ', ' David Bueno ', ' Dharma Patel ',
 ' Erik Cook ', ' Erik Madrid ', ' Evan Sattler ' ,
@@ -202,38 +243,64 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Quentin Gordon ', ' Ryan Roberts ',  ' Ryan Skyzypek ', ' Sahil Modi ', ' Sean Waite ',
 ' Shil Shah ' ,' Max Smithberg ' ,' Thomas Radomski ', ' Xander Apponi '  ,
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
-' Nick Dawson ', ' Walter Gilbert ', 
-' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', ' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+' Nick Dawson ', ' Walter Gilbert ', ' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', 
+' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+    
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
-'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', ' Christina Cardenas', 
+'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', 'Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
-'Hannah Melo', 'Brooke Bednarke '];
+'Hannah Melo', 'Brooke Bednarke'];
      
-var randBoy = 0;
-var randGirl = 0;
+var randBoy = 0
+var randGirl = 0
 var clickCount = 0;
 var allShips = []; //FOR MEMORY FUNCTION - Sahil
-var displayShip = function() {
-	clickCount++;
-	document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
-	var randBoy = acadBoys[Math.floor(Math.random() * 61)];
-        var randGirl = acadGirls[Math.floor(Math.random() * 20)];
-        	 document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-        	 allShips.push("The random ship is " + randBoy + " and " + randGirl);  
-        	 makelist();
+var displayShip = function() 
+{
+    //Click Counter
+    clickCount++;
+    document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
+    
+    //document.getElementById("input-form").action='';
+    
+    randBoy = acadBoys[Math.floor(Math.random() * 61)];
+    randGirl = acadGirls[Math.floor(Math.random() * 20)];
+    document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
+    allShips.push("The random ship is " + randBoy + " and " + randGirl);  
+    makelist();
+    
+    var inputq1 = randBoy;
+    var inputq2 = randGirl;
+    var q1ID = "entry.534329926";
+    var q2ID = "entry.613275184";
+    var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
+    var submitRef = '&submit=Submit';
+    var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
+    console.log(submitURL);
+    document.getElementById("input-form").action=submitURL;
+    document.getElementById("like").disabled=false;
+    document.getElementById("like").innerHTML = ("LIKE");
+    
+    // Achievements
     if (randBoy === ' Wil Blount ' && randGirl ==='Alexis Cosatino') {
      document.getElementById("ac").innerHTML = ("Unattainable ships are the best kind.");
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
     document.getElementById("ac").innerHTML = ("Wilshwarya");
     } else if (randBoy === ' Hammad Imam ' && randGirl === 'Nadia Nikolova'){
-     document.getElementById("ac").innerHTML = ("That ship went over the Niagara Falls");
+     document.getElementById("ac").innerHTML = ("That ship went over Niagara Falls");
     } else if (randBoy === ' Xander Apponi ' && randGirl === 'Marissa Gustafson'){
      document.getElementById("ac").innerHTML = ("Aww.... Young love.");
     } else if (randBoy === ' Jayam Shah ' && randGirl === 'Ami Patel'){
     document.getElementById("ac").innerHTML = ("Don't worry, you have Sean, Max and JT.");
     } else if (randBoy === ' Anthony Nicolini ' && randGirl === 'Ashley McKee'){
     document.getElementById("ac").innerHTML = ("#ASHTWON #5EVER");
+    } else if (randBoy === ' Chase Brennan ' && randGirl === 'Ashley McKee'){
+    document.getElementById("ac").innerHTML = ("Too late for that...");
+    } else if (randBoy === ' Chase Brennan ' && randGirl === 'Marissa Gustafson'){
+    document.getElementById("ac").innerHTML = ("Too late for that...");
+    } else if (randBoy === ' Hammad Imam ' && randGirl === 'Arielle Pfeil'){
+    document.getElementById("ac").innerHTML = ("Too late for that...");
     } else if (randBoy === ' Alex Powell ' && randGirl === 'Jane Halloran'){
     document.getElementById("ac").innerHTML = ("He's no Tom, but he'll have to do.");
     } else if (randBoy === ' Jayam Shah '){
@@ -242,18 +309,40 @@ var displayShip = function() {
      document.getElementById("ac").innerHTML = ("Friendzone");
     } else  {
      document.getElementById("ac").innerHTML = ("");
-    
-}; 
-       };
-function makelist(){
-	var listData = allShips;
-	var numberOfListItems = listData.length;
-        var elementLi = document.createElement("li");
-                elementLi.innerHTML = listData[(numberOfListItems-1)];
-                document.getElementById("memory").appendChild(elementLi);
+    }; 
 };
-
+function makelist(){
+    var listData = allShips;
+    var numberOfListItems = listData.length;
+    var elementLi = document.createElement("li");
+    elementLi.innerHTML = listData[(numberOfListItems-1)];
+    document.getElementById("memory").appendChild(elementLi);
+};
+    
+/*$('#input-form').one('submit',function(){
+        var inputq1 = randBoy;
+        var inputq2 = randGirl;
+        var q1ID = "entry.534329926";
+        var q2ID = "entry.613275184";
+        var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
+        var submitRef = '&submit=Submit';
+        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
+        console.log(submitURL);
+        document.getElementById("input-form").action=submitURL;
+        //document.getElementById('input-form').reset();
+        //$("#yourFormId").trigger('reset');
+        //$(this)[0].action=submitURL;
+});   */
+    
+function disableLike(){
+    document.getElementById("like").disabled=true;
+    document.getElementById("like").innerHTML = ("LIKED");
+};
+    
 var theme = 0;
+var theme1 = 0;
+    
+// THEMES
 function bgTheme() {
     if (theme === 0){
 	document.body.style.backgroundColor = "#000000";
@@ -265,13 +354,14 @@ document.getElementById("ship").style.border = "solid #FFFFFF 5px";
 document.getElementById("themeB").style.border = "solid #FFFFFF 5px";
 	document.getElementById("themeB").style.color = "#FFFFFF";
 	document.getElementById("themeB").style.background = "#000000";
+document.getElementById("themeC").style.border = "solid #FFFFFF 5px";
+	document.getElementById("themeC").style.color = "#FFFFFF";
+	document.getElementById("themeC").style.background = "#000000";
 document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logov2_square-white.jpg";
-
 document.getElementById("buttonShip").onmouseover = function() {
     this.style.backgroundColor = "black";}
 document.getElementById("buttonShip").onmouseout = function() {
     this.style.backgroundColor = "black";}
-
 	theme = 1;
 	}
 	
@@ -285,20 +375,63 @@ document.getElementById("ship").style.border = "solid #000000 5px";
 document.getElementById("themeB").style.border = "solid #000000 5px";
 	document.getElementById("themeB").style.color = "#000000";
 	document.getElementById("themeB").style.background = "lightgray";
+document.getElementById("themeC").style.border = "solid #000000 5px";
+	document.getElementById("themeC").style.color = "#000000";
+	document.getElementById("themeC").style.background = "lightgray";
 document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
-
 document.getElementById("buttonShip").onmouseover = function() {
     this.style.backgroundColor = "darkgray";}
 document.getElementById("buttonShip").onmouseout = function() {
     this.style.backgroundColor = "lightgray";}
-
 	theme = 0;
 	}
 };
-
+function blueTheme() {
+    if (theme1 === 0){
+	document.body.style.backgroundColor = "#000000";
+	document.body.style.color = "#63c3e7";
+document.getElementById("ship").style.border = "solid #63c3e7 5px";
+	document.getElementById("buttonShip").style.border = "solid #63c3e7 5px";
+	document.getElementById("buttonShip").style.color = "#63c3e7";
+	document.getElementById("buttonShip").style.background = "#000000";
+	document.getElementById("themeC").style.border = "solid #63c3e7 5px";
+	document.getElementById("themeC").style.color = "#63c3e7";
+	document.getElementById("themeC").style.background = "#000000";
+	document.getElementById("themeB").style.border = "solid #63c3e7 5px";
+	document.getElementById("themeB").style.color = "#63c3e7";
+	document.getElementById("themeB").style.background = "#000000";
+document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logov2_square-white.jpg";
+document.getElementById("buttonShip").onmouseover = function() {
+    this.style.backgroundColor = "black";}
+document.getElementById("buttonShip").onmouseout = function() {
+    this.style.backgroundColor = "black";}
+	theme1 = 1;
+	}
+	
+   else if(theme1 === 1) {
+	document.body.style.backgroundColor = "#C6E2FF";
+	document.body.style.color = "#000000";
+document.getElementById("ship").style.border = "solid #000000 5px";
+	document.getElementById("buttonShip").style.border = "solid #000000 5px";
+	document.getElementById("buttonShip").style.color = "#000000";
+	document.getElementById("buttonShip").style.background = "lightgray";
+	document.getElementById("themeC").style.border = "solid #000000 5px";
+	document.getElementById("themeC").style.color = "#000000";
+	document.getElementById("themeC").style.background = "lightgray";
+	document.getElementById("themeB").style.border = "solid #000000 5px";
+	document.getElementById("themeB").style.color = "#000000";
+	document.getElementById("themeB").style.background = "lightgray";
+document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
+document.getElementById("buttonShip").onmouseover = function() {
+    this.style.backgroundColor = "darkgray";}
+document.getElementById("buttonShip").onmouseout = function() {
+    this.style.backgroundColor = "lightgray";}
+	theme1 = 0;
+	}
+};
 document.getElementById("buttonShip").addEventListener("click", displayShip);
 document.getElementById("themeB").addEventListener("click", bgTheme);
-
+document.getElementById("themeC").addEventListener("click", blueTheme);
 </script>
 </body>
 </html>
