@@ -257,13 +257,13 @@ var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Shil Shah ' ,' Max Smithberg ' ,' Thomas Radomski ', ' Xander Apponi '  ,
 ' Yugi Ravichandran ' ,' Chase Brennan ' ,' Lukas Torgerson ', ' Matt Lulek ' , 
 ' Nick Dawson ', ' Walter Gilbert ', ' Jonathan Kim ', ' Zac Kovach ', ' Tim McCabe ', 
-' Andrew Pelster ', ' Nathaniel Fleig ', 'Jeffrey Larson'];
+' Andrew Pelster ', ' Nathaniel Fleig ', ' Jeffrey Larson ',' special '];
     
 var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel',
 'Arielle Pfeil', 'Autumn Chung', 'Caitlin Hueckstaedt', 'Christina Cardenas', 
 'Carlea Montenegro', 'Marissa Gustafson', 'Ivana Bozic', 'Jane Halloran', 'Jasmine Snipe', 
 'Kayla Jensen', 'Kayla Filipek', 'Marina Filipek', 'Nadia Nikolova', 'Vaishnavi Babers', 
-'Hannah Melo', 'Brooke Bednarke'];
+'Hannah Melo', 'Brooke Bednarke','special'];
      
 var randBoy = 0
 var randGirl = 0
@@ -277,8 +277,42 @@ var displayShip = function()
     
     //document.getElementById("input-form").action='';
     
-    randBoy = acadBoys[Math.floor(Math.random() * 61)];
-    randGirl = acadGirls[Math.floor(Math.random() * 20)];
+    randBoy = acadBoys[Math.floor(Math.random() * 62)];
+    randGirl = acadGirls[Math.floor(Math.random() * 21)];
+    
+    if (randBoy === ' special ' || randGirl ==='special') {
+        if (randGirl === 'special') {
+            randGirl = acadGirls[Math.floor(Math.random() * 21)];
+            if (randGirl === 'special') {
+                randGirl = acadGirls[Math.floor(Math.random() * 21)];
+            }
+            if (randBoy === ' Harris Mohamed  ') {
+            randGirl= 'Denise Lee'
+            }
+            if (randBoy === ' Sahil Modi  ') {
+            randGirl= 'Janki Dave'
+            }
+            if (randBoy === ' Max Smithberg ') {
+            randGirl= 'Max Smithberg'
+            }
+            if (randBoy === ' Hammad Imam ') {
+            randGirl= 'Rachel Ku'
+            }
+            if (randBoy === ' Harry Chen ') {
+            randGirl= 'Alize Velasquez'
+            }
+            if (randBoy === ' Anthony Nicolini ') {
+            randGirl= 'Diane Tran'
+            }
+
+        }
+        if (randBoy === ' special ') {
+            randBoy = acadBoys[Math.floor(Math.random() * 62)];
+            if (randBoy === ' special ') {
+                randBoy = acadBoys[Math.floor(Math.random() * 62)];
+            }
+        }
+    }
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
     allShips.push("The random ship is " + randBoy + " and " + randGirl);  
     makelist();
@@ -308,14 +342,17 @@ var displayShip = function()
     document.getElementById("ac").innerHTML = ("Don't worry, you have Sean, Max and JT.");
     } else if (randBoy === ' Anthony Nicolini ' && randGirl === 'Ashley McKee'){
     document.getElementById("ac").innerHTML = ("#ASHTWON #5EVER");
-    } else if (randBoy === ' Chase Brennan ' && randGirl === 'Ashley McKee'){
-    document.getElementById("ac").innerHTML = ("Too late for that...");
-    } else if (randBoy === ' Chase Brennan ' && randGirl === 'Marissa Gustafson'){
-    document.getElementById("ac").innerHTML = ("Too late for that...");
-    } else if (randBoy === ' Hammad Imam ' && randGirl === 'Arielle Pfeil'){
+    } else if (randBoy === ' Pawel Rzucidlo ' && randGirl === 'Nadia Nikolova'
+    || randBoy === ' Anthony Nicolini ' && randGirl === 'Autumn Chung'){
+    document.getElementById("ac").innerHTML = ("So should have happened...");
+    } else if (randBoy === ' Chase Brennan ' && randGirl === 'Ashley McKee' 
+    || randBoy === ' Chase Brennan ' && randGirl === 'Marissa Gustafson'
+    || randBoy === ' Hammad Imam ' && randGirl === 'Arielle Pfeil'){
     document.getElementById("ac").innerHTML = ("Too late for that...");
     } else if (randBoy === ' Alex Powell ' && randGirl === 'Jane Halloran'){
     document.getElementById("ac").innerHTML = ("He's no Tom, but he'll have to do.");
+    } else if (randBoy === ' Nick O Brien ' && randGirl === 'Alexis Cosatino'){
+    document.getElementById("ac").innerHTML = ("Not going to go there...");
     } else if (randBoy === ' Jayam Shah '){
      document.getElementById("ac").innerHTML = ("ARRE JAYAM!");
     } else if (randBoy === ' Wil Blount '){
