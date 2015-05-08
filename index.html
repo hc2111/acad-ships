@@ -180,7 +180,7 @@ background: lightgray;
 
 	<div id= "container">
          <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
-		 <div id = "title"> Academy Shipping Generator V.0.5.7 </div>
+		 <div id = "title"> Academy Shipping Generator V.0.6.1 </div>
 	</div>
 	
 	<span id="signinButton">
@@ -205,9 +205,9 @@ background: lightgray;
   	
 	<h4> What's new: </h4>
 	<ul> 
-		<li> Base code updated </li>
-		<li> Logo added</li>
-		<li> BETA testing currently underway </li>
+		<li> Addition of Key Binding </li>
+		<li> Leaderboards! </li>
+		<li> #Like Button </li>
 		<li> New themes! </li>
 		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
 	</ul>
@@ -235,6 +235,17 @@ background: lightgray;
    
     
 <script id="jsbin-javascript">
+//BUTTON BINDING
+$(document).keypress(function(e){
+    if (e.which == 108){
+        $("#like").click();
+    }
+});
+$(document).keypress(function(e){
+    if (e.which == 13){
+        $("#buttonShip").click();
+    }
+});
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
@@ -278,7 +289,7 @@ var acadGirls = ['Aishwarya Jois', 'Alexis Cosatino', 'Ashley McKee', 'Ami Patel
 var randBoy = 0
 var randGirl = 0
 var clickCount = 0;
-var allShips = []; //FOR MEMORY FUNCTION - Sahil
+var allShips = []; //FOR MEMORY FUNCTION
 var displayShip = function() 
 {
     //Click Counter
@@ -293,24 +304,15 @@ var displayShip = function()
     if (randBoy === ' special ' || randGirl ==='special') {
         if (randGirl === 'special') {
             randGirl = acadGirls[Math.floor(Math.random() * 21)];
-            if (randGirl === 'special') {
-                randGirl = acadGirls[Math.floor(Math.random() * 21)];
-     }
-            
-            if (randBoy === ' Max Smithberg ') {
-            randGirl= 'Max Smithberg'
-            }
-            if (randBoy === ' Harry Chen ') {
-            randGirl= 'Alize Velasquez'
-            }
+            if (randGirl === 'special') {randGirl = acadGirls[Math.floor(Math.random() * 21)];}
+            if (randBoy === ' Harris Mohamed  ') {randGirl= 'Denise Lee'}
+            if (randBoy === ' Max Smithberg ') {randGirl= 'Max Smithberg'}
+            if (randBoy === ' Hammad Imam ') {randGirl= 'Rachael Ku'}
+            if (randBoy === ' Harry Chen ') {randGirl= 'Alize Velasquez'}
         }
-
-        
         if (randBoy === ' special ') {
             randBoy = acadBoys[Math.floor(Math.random() * 62)];
-            if (randBoy === ' special ') {
-                randBoy = acadBoys[Math.floor(Math.random() * 62)];
-            }
+            if (randBoy === ' special ') {randBoy = acadBoys[Math.floor(Math.random() * 62)];}
         }
     }
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
