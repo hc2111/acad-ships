@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name=viewport content="width=device-width, initial-scale=1">
 <!-- Favicon Init -->
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
 <!-- Google Plus Code Setup -->
@@ -34,11 +35,13 @@ ul {
 }
 #logo {
 }
+    
 #container {width:100%;}
 img.resize{
   width:120px;
   height:120px;
 }
+    
 #title {
 	position: relative;
 	text-align: center;
@@ -47,39 +50,61 @@ img.resize{
 	font-size: 3em;
 }  
 #buttonShip {
-    float: left;
+    display: inline-block;
 	font-family: Garamond;
 	color: black;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	font-size: 300%;
-	width: 49%;
+	width: 100%;
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
-    }
+}
 #buttonShip:hover {
-    float: left;
+    display: inline-block;
 	font-family: Garamond;
 	color: black;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
 	font-size: 300%;
-	width: 50%
+	width: 100%;
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: darkgray;
     }
 #ship {
-	float: right;
+    display: inline-block;
 	border: solid black 5px;
-	width: 49%;
+    width: 99%;
 	height: 50px;
 	text-align: center; 
 	line-height: 40px;
 	border-radius: 10px;
 	font-family: Garamond;
-	font-size: 25px;
+	font-size: 135%;
+    position: relative;
+    top: 10px;
+}
+#like{
+    display: inline-block;
+    font-family: Garamond;
+    position: relative;
+    color: black;
+    border: solid black 3px;
+	border-radius: 15px;
+	background: lightgray;
+    width: 100px;
+}
+#like:hover {
+    display: inline-block;
+    font-family: Garamond;
+    position: relative;
+    color: black;
+    border: solid black 3px;
+	border-radius: 15px;
+	background: darkgray;
+    width: 100px;
 }
 #signinButton {
 	position: absolute;
@@ -103,35 +128,23 @@ img.resize{
 }    
 #memory {
 	text-align: right;
- 	font-size: 20px;
- 	height: 20px;
-	width: 525px;
+ 	font-size: 100%;
+	width: 50%;
 	float: right;
 	display: inline;
 	list-style: none;
 	font-family: Garamond;
 }
-#like{
-    font-family: Garamond;
-    position: absolute;
-    color: black;
-    border: solid black 3px;
-	border-radius: 15px;
-	background: lightgray;
-    right: 10px;
-    top: 250px;
-    width: 100px;
+#whatsnew {
+	text-align: left;
+ 	font-size: 100%;
+	width: 50%;
+	float: right;
+	display: inline;
+	list-style: none;
+	font-family: Garamond;
 }
-#like:hover {
-    font-family: Garamond;
-    position: absolute;
-    color: black;
-    border: solid black 3px;
-	border-radius: 15px;
-	background: darkgray;
-    right: 10px;
-    width: 100px;
-}
+
 #space{
     width: 100%;
 	height: 30px;
@@ -142,7 +155,7 @@ img.resize{
 	font-size: 20px;
 	line-height: 20px;
 	display: inline-block;
-	width: auto;
+	width: 50%;
 	height: 30px;
 	border: solid black 5px;
 	border-radius: 10px;
@@ -154,23 +167,23 @@ img.resize{
 	font-size: 20px;
 	line-height: 20px;
 	display: inline-block;
-	width: auto;
+	width: 50%;
 	height: 30px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
 }
 #leaderBtn {
-font-family: Garamond;
-color: black;
-font-size: 20px;
-line-height: 20px;
-display: inline-block;
-width: auto;
-height: 30px;
-border: solid black 5px;
-border-radius: 10px;
-background: lightgray;
+    font-family: Garamond;
+    color: black;
+    font-size: 20px;
+    line-height: 20px;
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    border: solid black 5px;
+    border-radius: 10px;
+    background: lightgray;
 }
 </style>
 </head>
@@ -199,18 +212,23 @@ background: lightgray;
     <div id = "space" > </div>
   	
     <div id = "memory" class = "line">
-    <h4>Ships log:</h4>
-  	<ul></ul>
+    <h4> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Ships log:</h4>
+    <ul>
+    
+    </ul>
   	</div>
   	
-	<h4> What's new: </h4>
-	<ul> 
-		<li> Addition of Key Binding </li>
-		<li> Leaderboards! </li>
-		<li> #Like Button </li>
-		<li> New themes! </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
-	</ul>
+	<div id = "whatsnew">
+        <h4> What's new: </h4>
+        <ul> 
+            <li> Addition of Key Binding </li>
+            <li> Leaderboards! </li>
+            <li> #Like Button </li>
+            <li> New themes! </li>
+            <li> Questions? Comment? Concerns? Suggestions? Shoot us an email at academyships@gmail.com</li>
+        </ul>
+    </div>
+
 		 
   	<div id = "gplus1" class="g-plusone"></div>
   	
@@ -376,21 +394,6 @@ function makelist(){
     elementLi.innerHTML = listData[(numberOfListItems-1)];
     document.getElementById("memory").appendChild(elementLi);
 };
-    
-/*$('#input-form').one('submit',function(){
-        var inputq1 = randBoy;
-        var inputq2 = randGirl;
-        var q1ID = "entry.534329926";
-        var q2ID = "entry.613275184";
-        var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
-        var submitRef = '&submit=Submit';
-        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
-        console.log(submitURL);
-        document.getElementById("input-form").action=submitURL;
-        //document.getElementById('input-form').reset();
-        //$("#yourFormId").trigger('reset');
-        //$(this)[0].action=submitURL;
-});   */
     
 function disableLike(){
     document.getElementById("like").disabled=true;
