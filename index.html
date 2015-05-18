@@ -180,7 +180,7 @@ background: lightgray;
 
 	<div id= "container">
          <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
-		 <div id = "title"> Academy Shipping Generator V.0.6.1 </div>
+		 <div id = "title"> Academy Shipping Generator V.0.6.2 </div>
 	</div>
 	
 	<span id="signinButton">
@@ -205,11 +205,12 @@ background: lightgray;
   	
 	<h4> What's new: </h4>
 	<ul> 
+		<li> More Achievements </li>
 		<li> Addition of Key Binding </li>
 		<li> Leaderboards! </li>
 		<li> #Like Button </li>
 		<li> New themes! </li>
-		<li> Questions? Comment? Concerns? Shoot us an email at academyships@gmail.com</li>
+		<li> Questions? Comments? Concerns? Shoot us an email at academyships@gmail.com</li>
 	</ul>
 		 
   	<div id = "gplus1" class="g-plusone"></div>
@@ -292,23 +293,20 @@ var displayShip = function()
     clickCount++;
     document.getElementById("buttonShip").innerHTML = ("You've created " + clickCount + " ships!");
     
-    //document.getElementById("input-form").action='';
     
     randBoy = acadBoys[Math.floor(Math.random() * 62)];
     randGirl = acadGirls[Math.floor(Math.random() * 21)];
     
     if (randBoy === ' special ' || randGirl ==='special') {
         if (randGirl === 'special') {
-            randGirl = acadGirls[Math.floor(Math.random() * 21)];
-            if (randGirl === 'special') {randGirl = acadGirls[Math.floor(Math.random() * 21)];}
-            if (randBoy === ' Harris Mohamed  ') {randGirl= 'Denise Lee'}
-            if (randBoy === ' Max Smithberg ') {randGirl= 'Max Smithberg'}
-            if (randBoy === ' Hammad Imam ') {randGirl= 'Rachael Ku'}
-            if (randBoy === ' Harry Chen ') {randGirl= 'Alize Velasquez'}
+            if (randBoy === ' Harris Mohamed  ') {randGirl = 'Denise Lee'}
+            if (randBoy === ' Max Smithberg ') {randGirl = 'Max Smithberg'}
+            if (randBoy === ' Hammad Imam ') {randGirl = 'Rachael Ku'}
+            if (randBoy === ' Harry Chen ') {randGirl = 'Alize Velasquez'}
         }
         if (randBoy === ' special ') {
+            //if (randGirl === 'Alexis Cosatino') {randBoy = ' Blake SOMEONE ADD HIS LAST NAME HERE '}
             randBoy = acadBoys[Math.floor(Math.random() * 62)];
-            if (randBoy === ' special ') {randBoy = acadBoys[Math.floor(Math.random() * 62)];}
         }
     }
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
@@ -355,7 +353,17 @@ var displayShip = function()
     document.getElementById("ac").innerHTML = ("Not going to go there...");
     } else if (randBoy === ' Ryan Skyzypek ' && randGirl === 'Ivana Bozic'){
     document.getElementById("ac").innerHTML = ("It's finally happening!");
-    } else if (randBoy === ' Jayam Shah '){
+    } else if (randBoy === ' Harris Mohamed ' && randGirl === 'Jasmine Snipe'){
+    document.getElementById("ac").innerHTML = ("Don't deny it any longer.");
+    }
+    else if (randBoy === ' Max Smithberg ' && randGirl === 'Max Smithberg'){
+    document.getElementById("ac").innerHTML = ("It's finally happening!");
+    } else if (randBoy === ' Harris Mohamed ' && randGirl === 'Denise lee'){
+    document.getElementById("ac").innerHTML = ("Even after the JT thing...");
+    } else if (randBoy === ' Harry Chen ' && randGirl === 'Alize Velasquz'){
+    document.getElementById("ac").innerHTML = ("Just ask her out already...");
+    }
+    else if (randBoy === ' Jayam Shah '){
      document.getElementById("ac").innerHTML = ("ARRE JAYAM!");
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
@@ -370,21 +378,6 @@ function makelist(){
     elementLi.innerHTML = listData[(numberOfListItems-1)];
     document.getElementById("memory").appendChild(elementLi);
 };
-    
-/*$('#input-form').one('submit',function(){
-        var inputq1 = randBoy;
-        var inputq2 = randGirl;
-        var q1ID = "entry.534329926";
-        var q2ID = "entry.613275184";
-        var baseURL = 'https://docs.google.com/forms/d/1nKdUSfFsPcRLXqt3KHD6ICYg8COPSw1H32VLAgaDwcA/formResponse?';
-        var submitRef = '&submit=Submit';
-        var submitURL = (baseURL + q1ID + "=" + inputq1 + "&" + q2ID + "=" + inputq2 + submitRef);
-        console.log(submitURL);
-        document.getElementById("input-form").action=submitURL;
-        //document.getElementById('input-form').reset();
-        //$("#yourFormId").trigger('reset');
-        //$(this)[0].action=submitURL;
-});   */
     
 function disableLike(){
     document.getElementById("like").disabled=true;
