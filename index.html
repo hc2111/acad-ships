@@ -300,9 +300,10 @@ var displayShip = function()
     if (randBoy === ' special ' || randGirl ==='special') {
         if (randGirl === 'special') {
             if (randBoy === ' Harris Mohamed  ') {randGirl = 'Denise Lee'}
-            if (randBoy === ' Max Smithberg ') {randGirl = 'Max Smithberg'}
-            if (randBoy === ' Hammad Imam ') {randGirl = 'Rachael Ku'}
-            if (randBoy === ' Harry Chen ') {randGirl = 'Alize Velasquez'}
+            else if (randBoy === ' Max Smithberg ') {randGirl = 'Max Smithberg'}
+            else if (randBoy === ' Hammad Imam ') {randGirl = 'Rachael Ku'}
+            else if (randBoy === ' Harry Chen ') {randGirl = 'Alize Velasquez'}
+            else{randGirl = acadGirls[Math.floor(Math.random() * 21)];}
         }
         if (randBoy === ' special ') {
             //if (randGirl === 'Alexis Cosatino') {randBoy = ' Blake SOMEONE ADD HIS LAST NAME HERE '}
