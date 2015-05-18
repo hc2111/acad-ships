@@ -303,11 +303,11 @@ var displayShip = function()
             else if (randBoy === ' Max Smithberg ') {randGirl = 'Max Smithberg'}
             else if (randBoy === ' Hammad Imam ') {randGirl = 'Rachael Ku'}
             else if (randBoy === ' Harry Chen ') {randGirl = 'Alize Velasquez'}
-            else{randGirl = acadGirls[Math.floor(Math.random() * 21)];}
+            else{randGirl = acadGirls[Math.floor(Math.random() * 20)];}
         }
         if (randBoy === ' special ') {
-            //if (randGirl === 'Alexis Cosatino') {randBoy = ' Blake SOMEONE ADD HIS LAST NAME HERE '}
-            randBoy = acadBoys[Math.floor(Math.random() * 62)];
+            if (randGirl === 'Alexis Cosatino') {randBoy = ' Blake Busch '}
+            else{randBoy = acadBoys[Math.floor(Math.random() * 61)];}
         }
     }
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
@@ -363,7 +363,7 @@ var displayShip = function()
     document.getElementById("ac").innerHTML = ("It's finally happening!");
     } else if (randBoy === ' Harris Mohamed ' && randGirl === 'Denise lee'){
     document.getElementById("ac").innerHTML = ("Even after the JT thing...");
-    } else if (randBoy === ' Harry Chen ' && randGirl === 'Alize Velasquz'){
+    } else if (randBoy === ' Harry Chen ' && randGirl === 'Alize Velasquez'){
     document.getElementById("ac").innerHTML = ("Just ask her out already...");
     }
     else if (randBoy === ' Jayam Shah '){
