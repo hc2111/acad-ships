@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name=viewport content="width=device-width, initial-scale=.75">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/> 
 <!-- Favicon Init -->
 <link rel="shortcut icon" href="https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/favicon.ico">
 <!-- Google Plus Code Setup -->
@@ -179,7 +179,7 @@ img.resize{
 
 	<div id= "container">
          <img id="logo1" img class="resize" img src= "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg">
-		 <div id = "title"> Academy Shipping Generator V.0.6.1 </div>
+		 <div id = "title"> Academy Shipping Generator V.0.1.1 </div>
 	</div>
 	
 
@@ -283,7 +283,6 @@ var displayShip = function()
     }
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
     allShips.push("The random ship is " + randBoy + " and " + randGirl);  
-    makelist();
     
     var inputq1 = randBoy;
     var inputq2 = randGirl;
@@ -344,13 +343,6 @@ var displayShip = function()
     } else  {
      document.getElementById("ac").innerHTML = ("");
     }; 
-};
-function makelist(){
-    var listData = allShips;
-    var numberOfListItems = listData.length;
-    var elementLi = document.createElement("li");
-    elementLi.innerHTML = listData[(numberOfListItems-1)];
-    document.getElementById("memory").appendChild(elementLi);
 };
     
 function disableLike(){
