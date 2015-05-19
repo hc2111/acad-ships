@@ -50,30 +50,22 @@ img.resize{
 	font-size: 3em;
 }  
 #buttonShip {
+    position: relative;
     display: inline-block;
 	font-family: "Times New Roman", Times, serif;
 	color: black;
 	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
-	font-size: 300%;
+	font-size: 275%;
 	width: 100%;
 	height: 60px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
+    top: 10px;
 }
-#buttonShip:hover {
-    display: inline-block;
-	font-family: "Times New Roman", Times, serif;
-	color: black;
-	text-shadow: 0 5px 5px rgba(255, 255, 255, .5);
-	font-size: 300%;
-	width: 100%;
-	height: 60px;
-	border: solid black 5px;
-	border-radius: 10px;
-	background: darkgray;
-    }
+
 #ship {
+    position: relative;
     display: inline-block;
 	border: solid black 5px;
     width: 99%;
@@ -82,30 +74,23 @@ img.resize{
 	line-height: 40px;
 	border-radius: 10px;
 	font-family: "Times New Roman", Times, serif;
-	font-size: 135%;
+	font-size: 130%;
     position: relative;
-    top: 10px;
+    top: 20px;
 }
 #like{
-    display: inline-block;
     font-family: "Times New Roman", Times, serif;
     position: relative;
     color: black;
     border: solid black 3px;
 	border-radius: 15px;
 	background: lightgray;
-    width: 100px;
+    font-size: 130%;
+    float: right;
+    width: 200px;
+    height: 35px;
 }
-#like:hover {
-    display: inline-block;
-    font-family: "Times New Roman", Times, serif;
-    position: relative;
-    color: black;
-    border: solid black 3px;
-	border-radius: 15px;
-	background: darkgray;
-    width: 100px;
-}
+
 #signinButton {
 	position: absolute;
 	top: 10px; 
@@ -121,25 +106,20 @@ img.resize{
 #ac {
 	border: none;
     position:absolute;
-    right: 150px;
+    top: 20px;
+    right: 25%;
+    width: 50%;
     text-align: center; 
 	font-family: "Times New Roman", Times, serif;
-	font-size: 30px;	
+	font-size: 40px;	
 }    
 #memory {
-	text-align: right;
- 	font-size: 100%;
+	position: relative;
+    text-align: right;
+ 	font-size: 125%;
 	width: 50%;
-	float: right;
-	display: inline;
-	list-style: none;
-	font-family: "Times New Roman", Times, serif;
-}
-#whatsnew {
-	text-align: left;
- 	font-size: 100%;
-	width: 50%;
-	float: right;
+	top: -125px;
+    right;
 	display: inline;
 	list-style: none;
 	font-family: "Times New Roman", Times, serif;
@@ -150,37 +130,43 @@ img.resize{
 	height: 30px;
 }
 #themeB {
-	font-family: "Times New Roman", Times, serif;
+	position: relative;
+    font-family: "Times New Roman", Times, serif;
 	color: black;
 	font-size: 20px;
 	line-height: 20px;
 	display: inline-block;
-	width: 50%;
-	height: 30px;
+	top: 0px;
+    width: 50%;
+    height: 40px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
 }
 #themeC {
-	font-family: "Times New Roman", Times, serif;
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
 	color: black;
 	font-size: 20px;
 	line-height: 20px;
 	display: inline-block;
 	width: 50%;
-	height: 30px;
+    top: 5px;
+	height: 40px;
 	border: solid black 5px;
 	border-radius: 10px;
 	background: lightgray;
 }
 #leaderBtn {
+    position: relative;
     font-family: "Times New Roman", Times, serif;
     color: black;
     font-size: 20px;
     line-height: 20px;
     display: inline-block;
+    top: 10px;
     width: 50%;
-    height: 30px;
+    height: 40px;
     border: solid black 5px;
     border-radius: 10px;
     background: lightgray;
@@ -196,47 +182,12 @@ img.resize{
 		 <div id = "title"> Academy Shipping Generator V.0.6.1 </div>
 	</div>
 	
-	<span id="signinButton">
-	  <span
-	    class="g-signin"
-	    data-callback="signinCallback"
-	    data-clientid="282071029207-b27g29g024rtb8kq21qf1u8gl2r14ean.apps.googleusercontent.com" 
-	    data-cookiepolicy="single_host_origin"
-	    data-requestvisibleactions="http://schema.org/AddAction"
-	    data-scope="https://www.googleapis.com/auth/plus.login">
-	  </span>
-	</span>
+
 	
 	<button id = "buttonShip"> Click to Run </button>  
   	<div id = "ship" > </div>
     <div id = "space" > </div>
-  	
-    <div id = "memory" class = "line">
-    <h4> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Ships log:</h4>
-    <ul>
-    
-    </ul>
-  	</div>
-  	
-	<div id = "whatsnew">
-        <h4> What's new: </h4>
-        <ul> 
-            <li> Addition of Key Binding </li>
-            <li> Leaderboards! </li>
-            <li> #Like Button </li>
-            <li> New themes! </li>
-            <li> Questions? Comment? Concerns? Suggestions? Shoot us an email at academyships@gmail.com</li>
-        </ul>
-    </div>
-
-		 
-  	<div id = "gplus1" class="g-plusone"></div>
-  	
-  	<button id = "themeB"> Inverted Colors Theme </button>
-  	<button id = "themeC"> Black/Blue Color Theme </button>
-  	<a href="https://docs.google.com/spreadsheets/d/1VDERhmy08_sGY6fzimYbY4ETOOpH5LslsAmvII7Syzc/pubhtml?gid=975524339&single=true"><button id = "leaderBtn">Leaderboard</button></a>
-
-    <div id="Leaderbaord">
+  	<div id="Leaderbaord">
         <div>
             <div>
                 <div>
@@ -248,8 +199,22 @@ img.resize{
                 </div>
             </div>
         </div>
-    </div>
+    </div>  	
+   
+    <button id = "themeB"> Inverted Colors Theme </button>
+  	<button id = "themeC"> Black/Blue Color Theme </button>
+  	<a href="https://docs.google.com/spreadsheets/d/1VDERhmy08_sGY6fzimYbY4ETOOpH5LslsAmvII7Syzc/pubhtml?gid=975524339&single=true"><button id = "leaderBtn">Leaderboard</button></a>
+
+    <div id = "memory" class = "line">
+    <h4> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </h4>
+    <ul>
+    
+    </ul>
+  	</div>
     <iframe src="#" id="no-target" name="no-target" style="visibility:hidden"></iframe>
+
+ 	
+    
    
     
 <script id="jsbin-javascript">
@@ -264,22 +229,7 @@ $(document).keypress(function(e){
         $("#buttonShip").click();
     }
 });
-// google+ button 
-function signinCallback(authResult) {
-  if (authResult['status']['signed_in']) {
-    // Update the app to reflect a signed in user
-    // Hide the sign-in button now that the user is authorized, for example:
-    document.getElementById('signinButton').setAttribute('style', 'display: none');
-  } else {
-    // Update the app to reflect a signed out user
-    // Possible error values:
-    //   "user_signed_out" - User is signed-out
-    //   "access_denied" - User denied access to your app
-    //   "immediate_failed" - Could not automatically log in the user
-    console.log('Sign-in state: ' + authResult['error']);
-  }
-};
-    
+
 // Shipping Code
 var acadBoys = [ ' Aaron Martin ', ' Alex Powell ',
 ' Aleks Lesiewicz ', ' Alex Rodriguez ', ' Alex Vetsavong ',
@@ -318,24 +268,21 @@ var displayShip = function()
     
     randBoy = acadBoys[Math.floor(Math.random() * 62)];
     randGirl = acadGirls[Math.floor(Math.random() * 21)];
-    if (randBoy === ' special ' || randGirl ==='special') {
+     if (randBoy === ' special ' || randGirl ==='special') {
         if (randGirl === 'special') {
-            randGirl = acadGirls[Math.floor(Math.random() * 21)];
-            if (randGirl === 'special') {randGirl = acadGirls[Math.floor(Math.random() * 21)];}
-            if (randBoy === ' Harris Mohamed  ') {randGirl= 'Denise Lee'}
-            if (randBoy === ' Max Smithberg ') {randGirl= 'Max Smithberg'}
-            if (randBoy === ' Hammad Imam ') {randGirl= 'Rachael Ku'}
-            if (randBoy === ' Ryan Roberts ') {randGirl= 'Rachael Ku'}
-            if (randBoy === ' Harry Chen ') {randGirl= 'Alize Velasquez'}
+            if (randBoy === ' Harris Mohamed  ') {randGirl = 'Denise Lee'}
+            else if (randBoy === ' Max Smithberg ') {randGirl = 'Max Smithberg'}
+            else if (randBoy === ' Hammad Imam ') {randGirl = 'Rachael Ku'}
+            else if (randBoy === ' Harry Chen ') {randGirl = 'Alize Velasquez'}
+            else{randGirl = acadGirls[Math.floor(Math.random() * 20)];}
         }
         if (randBoy === ' special ') {
-            randBoy = acadBoys[Math.floor(Math.random() * 62)];
-            if (randBoy === ' special ') {randBoy = acadBoys[Math.floor(Math.random() * 62)];}
+            if (randGirl === 'Alexis Cosatino') {randBoy = ' Blake Busch '}
+            else{randBoy = acadBoys[Math.floor(Math.random() * 61)];}
         }
     }
-    
     document.getElementById("ship").innerHTML = ("The random ship is " + randBoy + " and " + randGirl);
-    allShips.push(randBoy + " and " + randGirl);  
+    allShips.push("The random ship is " + randBoy + " and " + randGirl);  
     makelist();
     
     var inputq1 = randBoy;
@@ -358,11 +305,9 @@ var displayShip = function()
     } else if (randBoy === ' Wil Blount ' && randGirl === 'Aishwarya Jois'){
     document.getElementById("ac").innerHTML = ("Wilshwarya");
     } else if (randBoy === ' Hammad Imam ' && randGirl === 'Nadia Nikolova'){
-    document.getElementById("ac").innerHTML = ("That ship went over Niagara Falls");
-    } else if (randBoy === ' Max Smithberg ' && randGirl === 'Max Smithberg'){
-    document.getElementById("ac").innerHTML = ("A match made in heaven");
+     document.getElementById("ac").innerHTML = ("That ship went over Niagara Falls");
     } else if (randBoy === ' Xander Apponi ' && randGirl === 'Marissa Gustafson'){
-    document.getElementById("ac").innerHTML = ("Aww.... Young love.");
+     document.getElementById("ac").innerHTML = ("Aww.... Young love.");
     } else if (randBoy === ' Jayam Shah ' && randGirl === 'Ami Patel'){
     document.getElementById("ac").innerHTML = ("Don't worry, you have Sean, Max and JT.");
     } else if (randBoy === ' Anthony Nicolini ' && randGirl === 'Ashley McKee'){
@@ -372,14 +317,27 @@ var displayShip = function()
     document.getElementById("ac").innerHTML = ("So should have happened...");
     } else if (randBoy === ' Chase Brennan ' && randGirl === 'Ashley McKee' 
     || randBoy === ' Chase Brennan ' && randGirl === 'Marissa Gustafson'
-    || randBoy === ' Hammad Imam ' && randGirl === 'Arielle Pfeil'
-    || randBoy === ' John Bozeki ' && randGirl === 'Kayla Jensen'){
+    || randBoy === ' Hammad Imam ' && randGirl === 'Arielle Pfeil'){
     document.getElementById("ac").innerHTML = ("Too late for that...");
     } else if (randBoy === ' Alex Powell ' && randGirl === 'Jane Halloran'){
     document.getElementById("ac").innerHTML = ("He's no Tom, but he'll have to do.");
     } else if (randBoy === ' Nick O Brien ' && randGirl === 'Alexis Cosatino'){
     document.getElementById("ac").innerHTML = ("Not going to go there...");
-    } else if (randBoy === ' Jayam Shah '){
+    } else if (randBoy === ' Ryan Skyzypek ' && randGirl === 'Ivana Bozic'){
+    document.getElementById("ac").innerHTML = ("It's finally happening!");
+    } else if (randBoy === ' Harris Mohamed ' && randGirl === 'Jasmine Snipe'){
+    document.getElementById("ac").innerHTML = ("Don't deny it any longer.");
+    } else if (randBoy === ' Xander Apponi ' && randGirl != 'Marissa Gustafson'){
+    document.getElementById("ac").innerHTML = ("Are you mad yet Marissa?");
+    }
+    else if (randBoy === ' Max Smithberg ' && randGirl === 'Max Smithberg'){
+    document.getElementById("ac").innerHTML = ("It's finally happening!");
+    } else if (randBoy === ' Harris Mohamed ' && randGirl === 'Denise lee'){
+    document.getElementById("ac").innerHTML = ("Even after the JT thing...");
+    } else if (randBoy === ' Harry Chen ' && randGirl === 'Alize Velasquez'){
+    document.getElementById("ac").innerHTML = ("");
+    }
+    else if (randBoy === ' Jayam Shah '){
      document.getElementById("ac").innerHTML = ("ARRE JAYAM!");
     } else if (randBoy === ' Wil Blount '){
      document.getElementById("ac").innerHTML = ("Friendzone");
