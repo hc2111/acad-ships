@@ -242,7 +242,7 @@ $(document).keypress(function(e){
         $("#like").click();
     }
 });
-
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}; //DISABLES RIGHT CLICK
 // google+ button 
 function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
