@@ -201,8 +201,8 @@ img.resize{
         </div>
     </div>  	
    
-    <button id = "themeB"> Invert Colors </button>
-  	<button id = "themeC"> Black/Blue Colors </button>
+    <button id = "themeB"> Black/White </button>
+  	<button id = "themeC"> Black/Blue </button>
   	<a href="https://docs.google.com/spreadsheets/d/1VDERhmy08_sGY6fzimYbY4ETOOpH5LslsAmvII7Syzc/pubhtml?gid=975524339&single=true"><button id = "leaderBtn">Leaderboard</button></a>
 
     <div id = "memory" class = "line">
@@ -398,6 +398,8 @@ document.getElementById("leaderBtn").style.border = "solid #000000 5px";
 	document.getElementById("leaderBtn").style.color = "#000000";
 	document.getElementById("leaderBtn").style.background = "lightgray";
 document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
+	   theme = 0;
+       theme1 = 0;
 	}
 };
 function blueTheme() {
@@ -421,10 +423,6 @@ document.getElementById("leaderBtn").style.border = "solid #63c3e7 5px";
 	document.getElementById("leaderBtn").style.color = "#63c3e7";
 	document.getElementById("leaderBtn").style.background = "#000000";      
 document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logov2_square-white.jpg";
-document.getElementById("buttonShip").onmouseover = function() {
-    this.style.backgroundColor = "black";}
-document.getElementById("buttonShip").onmouseout = function() {
-    this.style.backgroundColor = "black";}
 	theme1 = 1;
 	}
 	
@@ -448,6 +446,8 @@ document.getElementById("leaderBtn").style.border = "solid black 5px";
 	document.getElementById("leaderBtn").style.color = "black";
 	document.getElementById("leaderBtn").style.background = "lightgray"; 
 document.getElementById("logo1").src = "https://raw.githubusercontent.com/hc2111/acad-ships/gh-pages/Images/ship-logo_120.jpg";
+       theme1 = 0;
+       theme = 0;
 	}
 };
 document.getElementById("buttonShip").addEventListener("click", displayShip);
